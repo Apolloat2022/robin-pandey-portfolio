@@ -1,0 +1,44 @@
+title: "Robin Pandey | Developer Portfolio"
+description: "Showcasing 9 production-ready web applications across various domains"
+baseurl: "" # leave empty for root domain
+url: "https://robinpandey.github.io" # or your custom domain
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Custom variables
+author: "Robin Pandey"
+email: "contact@robinpandey.com"
+github_username: "robinpandey"
+twitter_username: ""
+linkedin_username: ""
+
+# Theme settings
+theme_color: "#3b82f6"
+accent_color: "#8b5cf6"
+
+# Projects configuration
+projects:
+  - title: "Apollo 18 Token Platform"
+    category: "Web Platform"
+    featured: true
+    custom_domain: true
+    
+  - title: "Mirror Meditation"
+    category: "Productivity"
+    featured: false
+    custom_domain: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      permalink: "/projects/:title/"
