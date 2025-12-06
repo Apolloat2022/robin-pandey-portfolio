@@ -1,241 +1,758 @@
-/* AI Expertise Section Styles */
-.ai-methodology-badge {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    color: white;
-    padding: 1rem 1.5rem;
-    border-radius: var(--radius);
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-weight: 500;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robin Pandey | AI-Assisted Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Robin Pandey</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#applications">Live Applications</a></li>
+                <li><a href="#ai-expertise">AI Development</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
-.ai-tools {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">AI-Assisted Full Stack Developer</span>
+                    <br>Solution Architect & Senior Product Manager
+                    <br>Building Production Applications with LLMs
+                </h1>
+                <p class="hero-subtitle">
+                    MBA-educated technical leader with 10+ years experience leveraging ChatGPT, Gemini, DeepSeek & Qwen
+                    to architect, generate, debug and deploy 7+ production applications. Combines product strategy 
+                    expertise with cutting-edge AI development techniques.
+                </p>
+                <div class="hero-contact">
+                    <div class="contact-info">
+                        <span><i class="fas fa-map-marker-alt"></i> Dallas, Texas | U.S. Citizen</span>
+                        <span><i class="fas fa-phone"></i> 214-973-6728</span>
+                        <span><i class="fas fa-envelope"></i> robpandeymba@gmail.com</span>
+                        <span><i class="fas fa-user-tie"></i> Remote Position Available</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#applications" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View 7+ Live Applications
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-paper-plane"></i> Get in Touch
+                    </a>
+                    <a href="https://linkedin.com/in/robinpandey" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">7+</span>
+                        <span class="stat-label">Production Apps</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">LLMs Mastered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">Engagement Increase</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="window-title">ai_development.js</span>
+                    </div>
+                    <div class="window-content">
+                        <pre><code class="javascript">const developer = {
+  name: "Robin Pandey",
+  roles: [
+    "AI-Assisted Full Stack Developer",
+    "Solution Architect", 
+    "Senior Product Manager"
+  ],
+  credentials: {
+    education: "MBA, Management",
+    experience: "10+ years",
+    certifications: ["CSM", "AI Product Manager"]
+  },
+  llmExpertise: ["ChatGPT", "Gemini", "DeepSeek", "Qwen", "Claude"],
+  methodology: "Multi-LLM Development Strategy",
+  liveApplications: 7,
+  keyAchievement: "40% engagement increase through AI solutions"
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.ai-tool {
-    padding: 4px 10px;
-    background: rgba(139, 92, 246, 0.1);
-    color: #8b5cf6;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    border: 1px solid rgba(139, 92, 246, 0.3);
-}
+    <!-- Live Applications Section -->
+    <section id="applications" class="applications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Live Production Applications</h2>
+                <p class="section-subtitle">Built and deployed using AI-assisted development workflows with multiple LLMs</p>
+            </div>
 
-/* Methodology Cards */
-.methodology-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
+            <!-- AI Methodology Badge -->
+            <div class="ai-methodology-badge">
+                <i class="fas fa-robot"></i>
+                <span>All applications developed using ChatGPT, Gemini, DeepSeek & Qwen with prompt engineering</span>
+            </div>
 
-.methodology-card {
-    background: var(--bg-card);
-    padding: 2rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    transition: var(--transition);
-}
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Apollo 18 Token Platform -->
+                <div class="project-card" data-category="web3" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured">
+                            <i class="fas fa-star"></i> Featured
+                        </span>
+                        <span class="project-badge web3">
+                            <i class="fas fa-link"></i> Web3/Blockchain
+                        </span>
+                        <span class="project-badge ai">
+                            <i class="fas fa-robot"></i> Multi-LLM Built
+                        </span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Apollo 18 Token Platform</h3>
+                        <p class="project-description">
+                            Complete Web3 application with multi-wallet connectivity, developed using ChatGPT, Gemini, and DeepSeek.
+                            Features WalletConnect integration, React Native PWA, and serverless Google Apps Script backend.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Web3</span>
+                            <span class="tech-tag">Ethereum</span>
+                            <span class="tech-tag">LLM-Generated</span>
+                            <span class="tech-tag">Google Apps Script</span>
+                        </div>
+                        <div class="ai-tools">
+                            <span class="ai-tool">ChatGPT</span>
+                            <span class="ai-tool">Gemini</span>
+                            <span class="ai-tool">DeepSeek</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://apollo18token.com" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-server"></i> Production
+                        </span>
+                    </div>
+                </div>
 
-.methodology-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary);
-}
+                <!-- Mirror Meditation -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-header">
+                        <span class="project-badge mobile">
+                            <i class="fas fa-mobile-alt"></i> Mobile App
+                        </span>
+                        <span class="project-badge ai">
+                            <i class="fas fa-robot"></i> AI-Assisted
+                        </span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Mirror Meditation App</h3>
+                        <p class="project-description">
+                            Cross-platform mobile meditation application built with React Native and Expo using 
+                            AI-generated code. Features guided meditation, progress tracking, and responsive design.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Expo</span>
+                            <span class="tech-tag">Mobile</span>
+                            <span class="tech-tag">LLM-Assisted</span>
+                        </div>
+                        <div class="ai-tools">
+                            <span class="ai-tool">ChatGPT</span>
+                            <span class="ai-tool">Gemini</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://venerable-melomakarona-594663.netlify.app/" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <span class="deployment-badge netlify">
+                            <i class="fab fa-netlify"></i> Netlify
+                        </span>
+                    </div>
+                </div>
 
-.methodology-icon {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
+                <!-- Business Website Portfolio Cards -->
+                <!-- Apollo Soccer Academy -->
+                <div class="project-card" data-category="business">
+                    <div class="project-header">
+                        <span class="project-badge business">
+                            <i class="fas fa-briefcase"></i> Business
+                        </span>
+                        <span class="project-badge ai">
+                            <i class="fas fa-robot"></i> AI-Generated
+                        </span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Apollo Soccer Academy</h3>
+                        <p class="project-description">
+                            Sports academy website with AI-generated scheduling, registration systems, and team management.
+                            Part of 5-business website portfolio built with AI assistance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5/CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Forms</span>
+                            <span class="tech-tag">AI-Generated</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://apollosocceracademy.com" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-server"></i> Production
+                        </span>
+                    </div>
+                </div>
 
-.llm-list, .tool-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
+                <!-- Apollo Tunes -->
+                <div class="project-card" data-category="business">
+                    <div class="project-header">
+                        <span class="project-badge business">
+                            <i class="fas fa-briefcase"></i> Business
+                        </span>
+                        <span class="project-badge media">
+                            <i class="fas fa-music"></i> Media Platform
+                        </span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Apollo Tunes</h3>
+                        <p class="project-description">
+                            Music streaming platform with playlist creation, audio player, and content management.
+                            Built using AI-assisted development techniques.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Audio API</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">PWA</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://apollotunes.com" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-server"></i> Production
+                        </span>
+                    </div>
+                </div>
 
-.llm-item, .tool-item {
-    padding: 6px 12px;
-    background: var(--bg-secondary);
-    border-radius: var(--radius-sm);
-    font-size: 0.9rem;
-    font-weight: 500;
-}
+                <!-- EmbroidIt -->
+                <div class="project-card" data-category="ecommerce">
+                    <div class="project-header">
+                        <span class="project-badge ecommerce">
+                            <i class="fas fa-shopping-cart"></i> E-commerce
+                        </span>
+                        <span class="project-badge custom">
+                            <i class="fas fa-palette"></i> Custom Design
+                        </span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">EmbroidIt</h3>
+                        <p class="project-description">
+                            Custom embroidery e-commerce platform with design tool and order management.
+                            Features AI-generated functionality for custom embroidery services.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">E-commerce</span>
+                            <span class="tech-tag">Design Tool</span>
+                            <span class="tech-tag">Payment API</span>
+                            <span class="tech-tag">.us Domain</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://embroidit.us" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-server"></i> Production
+                        </span>
+                    </div>
+                </div>
 
-/* Timeline Styles */
-.timeline {
-    position: relative;
-    padding-left: 2rem;
-    margin: 3rem 0;
-}
+                <!-- Apollo Technologies -->
+                <div class="project-card" data-category="business">
+                    <div class="project-header">
+                        <span class="project-badge business">
+                            <i class="fas fa-briefcase"></i> Business
+                        </span>
+                        <span class="project-badge tech">
+                            <i class="fas fa-laptop-code"></i> Tech Solutions
+                        </span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Apollo Technologies</h3>
+                        <p class="project-description">
+                            Business technology solutions website with service showcase and client portal.
+                            Demonstrates AI-assisted development for corporate solutions.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Business</span>
+                            <span class="tech-tag">Services</span>
+                            <span class="tech-tag">Corporate</span>
+                            <span class="tech-tag">Solutions</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://apollotechnologiesus.com" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-server"></i> Production
+                        </span>
+                    </div>
+                </div>
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--primary);
-    opacity: 0.3;
-}
+                <!-- OnlineMyBiz -->
+                <div class="project-card" data-category="business">
+                    <div class="project-header">
+                        <span class="project-badge business">
+                            <i class="fas fa-briefcase"></i> Business
+                        </span>
+                        <span class="project-badge portal">
+                            <i class="fas fa-portal-enter"></i> Business Portal
+                        </span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">OnlineMyBiz</h3>
+                        <p class="project-description">
+                            Comprehensive business management portal with tools for small to medium enterprises.
+                            Built with AI-generated code for multiple service offerings.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Portal</span>
+                            <span class="tech-tag">Business Tools</span>
+                            <span class="tech-tag">Management</span>
+                            <span class="tech-tag">.net Domain</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://onlinemybiz.net" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-server"></i> Production
+                        </span>
+                    </div>
+                </div>
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 2.5rem;
-}
+                <!-- Apollo STEM Academy -->
+                <div class="project-card" data-category="education">
+                    <div class="project-header">
+                        <span class="project-badge education">
+                            <i class="fas fa-graduation-cap"></i> Education
+                        </span>
+                        <span class="project-badge stem">
+                            <i class="fas fa-atom"></i> STEM
+                        </span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Apollo STEM Academy</h3>
+                        <p class="project-description">
+                            Educational platform for STEM learning with interactive lessons and progress tracking.
+                            Features AI-generated educational tools and learning management.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Education</span>
+                            <span class="tech-tag">STEM</span>
+                            <span class="tech-tag">Learning</span>
+                            <span class="tech-tag">GitHub Pages</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://apolloat2022.github.io/ApolloStemAcademy" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <span class="deployment-badge github">
+                            <i class="fab fa-github"></i> GitHub Pages
+                        </span>
+                    </div>
+                </div>
 
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -2.3rem;
-    top: 0;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--primary);
-    border: 3px solid var(--bg-primary);
-}
+                <!-- To-Do Application -->
+                <div class="project-card" data-category="productivity">
+                    <div class="project-header">
+                        <span class="project-badge productivity">
+                            <i class="fas fa-tasks"></i> Productivity
+                        </span>
+                        <span class="project-badge modern">
+                            <i class="fas fa-bolt"></i> Modern Stack
+                        </span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">To-Do Application</h3>
+                        <p class="project-description">
+                            Modern task management application with drag & drop, categories, and local storage.
+                            Built with React and deployed on Vercel using AI-assisted development.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Local Storage</span>
+                            <span class="tech-tag">Drag & Drop</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://todo-app-indol-seven-99.vercel.app" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <span class="deployment-badge vercel">
+                            <i class="fab fa-vercel"></i> Vercel
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.timeline-date {
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 0.5rem;
-}
+    <!-- AI & LLM Expertise Section -->
+    <section id="ai-expertise" class="ai-expertise">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">AI Development Methodology</h2>
+                <p class="section-subtitle">Mastering multiple LLMs and AI tools to build production applications</p>
+            </div>
+            
+            <div class="methodology-cards">
+                <div class="methodology-card">
+                    <div class="methodology-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Multi-LLM Strategy</h3>
+                    <p>Utilize ChatGPT, Gemini, DeepSeek, Kimi, and Qwen to compare outputs and select optimal solutions for each development task.</p>
+                    <div class="llm-list">
+                        <span class="llm-item chatgpt">ChatGPT/GPT-4</span>
+                        <span class="llm-item gemini">Google Gemini</span>
+                        <span class="llm-item deepseek">DeepSeek</span>
+                        <span class="llm-item qwen">Qwen</span>
+                        <span class="llm-item claude">Claude</span>
+                    </div>
+                </div>
+                
+                <div class="methodology-card">
+                    <div class="methodology-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Prompt Engineering</h3>
+                    <p>Develop structured prompts for code generation, debugging, optimization, and deployment scripting across different LLMs.</p>
+                    <ul class="methodology-list">
+                        <li>Iterative prompt refinement</li>
+                        <li>Context-aware code generation</li>
+                        <li>Debugging through AI collaboration</li>
+                        <li>Optimization prompting</li>
+                    </ul>
+                </div>
+                
+                <div class="methodology-card">
+                    <div class="methodology-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>AI Tool Integration</h3>
+                    <p>Implement and integrate various AI tools to enhance development workflows and business operations.</p>
+                    <div class="tool-grid">
+                        <span class="tool-item">Zapier</span>
+                        <span class="tool-item">Vectorshift</span>
+                        <span class="tool-item">Vapi/Trillio</span>
+                        <span class="tool-item">AI Voice Agents</span>
+                        <span class="tool-item">Workflow Automation</span>
+                        <span class="tool-item">No-Code AI</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="technical-skills">
+                <h3>Technical Implementation Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-layer-group"></i> Frontend Development</h4>
+                        <div class="skill-items">
+                            <span>JavaScript/ES6</span>
+                            <span>React/React Native</span>
+                            <span>HTML5/CSS3</span>
+                            <span>TypeScript</span>
+                            <span>Expo</span>
+                            <span>PWA</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-server"></i> Backend & Architecture</h4>
+                        <div class="skill-items">
+                            <span>Node.js</span>
+                            <span>Google Apps Script</span>
+                            <span>REST APIs</span>
+                            <span>Firebase</span>
+                            <span>Serverless</span>
+                            <span>System Architecture</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-cloud-upload-alt"></i> Deployment & Tools</h4>
+                        <div class="skill-items">
+                            <span>Vercel</span>
+                            <span>Netlify</span>
+                            <span>Git/GitHub</span>
+                            <span>CI/CD</span>
+                            <span>Command Line</span>
+                            <span>Expo CLI</span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-link"></i> Web3 & Blockchain</h4>
+                        <div class="skill-items">
+                            <span>Ethereum</span>
+                            <span>ERC-20</span>
+                            <span>WalletConnect</span>
+                            <span>MetaMask</span>
+                            <span>Ethers.js</span>
+                            <span>Blockchain Apps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.timeline-content {
-    background: var(--bg-card);
-    padding: 1.5rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-}
+    <!-- Professional Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">10+ years in technical product leadership and AI-assisted development</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Oct 2021 - Present</div>
+                    <div class="timeline-content">
+                        <h3>AI-Assisted Full Stack Developer, Solution Architect & Senior Product Manager</h3>
+                        <h4>Apollo Technologies US Inc., Frisco, Texas</h4>
+                        <ul>
+                            <li>Architect and deploy complete web applications using AI development workflows with multiple LLMs</li>
+                            <li>Lead product strategy while implementing technical solutions through AI-assisted coding</li>
+                            <li>Manage complete SDLC from concept to deployment using AI-generated code</li>
+                            <li>Implement responsive applications by directing LLMs to generate production-ready code</li>
+                            <li>Debug and optimize AI-generated code through iterative prompt refinement</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Sep 2017 - Present</div>
+                    <div class="timeline-content">
+                        <h3>AI-Assisted Developer and Product Director</h3>
+                        <h4>Apollo Performing Arts and Academy, Frisco, Texas</h4>
+                        <ul>
+                            <li>Drive digital transformation by implementing AI-generated web solutions</li>
+                            <li>Increase user engagement by 40% through strategic AI development tools</li>
+                            <li>Direct LLMs to create and maintain 5+ business websites</li>
+                            <li>Implement AI voice and chat agent prototypes using Vapi and Trillio</li>
+                            <li>Utilize workflow automation tools including Zapier and Vectorshift</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 2015 - Feb 2016</div>
+                    <div class="timeline-content">
+                        <h3>Senior Product Manager (Contract)</h3>
+                        <h4>Cognizant and CVS Pharmacy, Irving, Texas</h4>
+                        <ul>
+                            <li>Enhanced enterprise software platforms collaborating with engineering teams</li>
+                            <li>Applied product management expertise to large-scale retail/pharmacy projects</li>
+                            <li>Developed technical specifications and requirements documentation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2014 - 2015</div>
+                    <div class="timeline-content">
+                        <h3>Senior Product Manager Roles (Multiple Contracts)</h3>
+                        <h4>Cognizant with State Auto Insurance & JPMorgan Chase</h4>
+                        <ul>
+                            <li>Product Owner for internal reporting and business intelligence tools</li>
+                            <li>Managed enterprise software for financial services and mortgage</li>
+                            <li>Aligned technical implementation with business objectives</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="education-certifications">
+                <div class="education">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="edu-item">
+                        <h4>Master of Business Administration (MBA), Management</h4>
+                        <p>New York Institute of Technology</p>
+                    </div>
+                    <div class="edu-item">
+                        <h4>Bachelor of Science (BS), Economics</h4>
+                        <p>Northern Illinois University</p>
+                    </div>
+                </div>
+                
+                <div class="certifications">
+                    <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                    <div class="cert-grid">
+                        <span class="cert-item">Certified Scrum Master (CSM)</span>
+                        <span class="cert-item">AI Product Manager Certification</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.timeline-content h3 {
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-}
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Interested in AI-assisted development or have a project in mind?</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>robpandeymba@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>214-973-6728</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/robinpandey</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>github.com/Apolloat2022</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-blog"></i>
+                        <div>
+                            <h3>Technical Blog</h3>
+                            <p>robinpandey.wordpress.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Dallas, Texas | U.S. Citizen<br>Remote Position Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-.timeline-content h4 {
-    color: var(--text-secondary);
-    font-weight: 500;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Robin Pandey</h3>
+                    <p>AI-Assisted Full Stack Developer, Solution Architect & Senior Product Manager</p>
+                    <p class="footer-tagline">Transforming concepts into live applications through AI collaboration</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#applications">Live Applications</a>
+                    <a href="#ai-expertise">AI Methodology</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-stats">
+                    <div class="stat">
+                        <span class="stat-number">7+</span>
+                        <span>Live Apps</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10+</span>
+                        <span>Years Exp</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span>LLMs Used</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Robin Pandey. All applications are live and maintained. Built with AI-assisted development.</p>
+            </div>
+        </div>
+    </footer>
 
-.timeline-content ul {
-    padding-left: 1.5rem;
-    color: var(--text-secondary);
-}
-
-.timeline-content li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.skill-category {
-    background: var(--bg-card);
-    padding: 1.5rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-}
-
-.skill-category h4 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-}
-
-.skill-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.skill-items span {
-    padding: 6px 12px;
-    background: var(--bg-secondary);
-    border-radius: var(--radius-sm);
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--text-primary);
-}
-
-/* Education & Certifications */
-.education-certifications {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-top: 3rem;
-}
-
-.edu-item, .certifications {
-    background: var(--bg-card);
-    padding: 1.5rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-}
-
-.edu-item h4, .certifications h3 {
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-}
-
-.edu-item p {
-    color: var(--text-secondary);
-}
-
-.cert-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.cert-item {
-    padding: 8px 16px;
-    background: var(--bg-secondary);
-    border-radius: var(--radius-sm);
-    font-weight: 500;
-    color: var(--text-primary);
-}
-
-/* Contact info enhancements */
-.hero-contact {
-    margin: 1.5rem 0;
-}
-
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.contact-info span {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-}
-
-.contact-info i {
-    color: var(--primary);
-}
+    <script src="js/script.js"></script>
+</body>
+</html>
