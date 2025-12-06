@@ -110,29 +110,41 @@ filterButtons.forEach(button => {
 // Update current year in footer
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-// Form Submission
+// Form Submission - Formspree Integration
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData);
-        
-        // Here you would typically send the data to a server
-        // For now, just show a success message
-        const submitButton = contactForm.querySelector('button[type="submit"]');
+    contactForm.addEventListener('submit', function(e) {
+        const submitButton = this.querySelector('button[type="submit"]');
         const originalText = submitButton.innerHTML;
         
-        submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+        // Show loading state
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitButton.disabled = true;
         
+        // Formspree will handle the actual submission
+        // No need for e.preventDefault() - let the form submit to Formspree
+        
+        // Reset button state after form submission
         setTimeout(() => {
-            submitButton.innerHTML = originalText;
-            submitButton.disabled = false;
-            contactForm.reset();
-        }, 3000);
+            // This runs after Formspree processes the form
+            if (this.checkValidity()) {
+                submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                
+                // Optional: Reset form after success
+                setTimeout(() => {
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                    this.reset();
+                }, 2000);
+            } else {
+                // If form is invalid, reset button
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+            }
+        }, 500);
+        
+        // Note: Formspree will redirect to their success page
+        // You can customize this in Formspree dashboard settings
     });
 }
 
