@@ -1,575 +1,241 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robin Pandey | Developer Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="logo">Robin Pandey</a>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#applications">Applications</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button id="theme-toggle" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                </button></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
+/* AI Expertise Section Styles */
+.ai-methodology-badge {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+}
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="gradient-text">Full-Stack Developer</span>
-                    <br>Solution Architect & Product Manager
-                    <br>Building Digital Experiences
-                </h1>
-                <p class="hero-subtitle">
-                    I create production-ready web applications with modern technologies.
-                    Currently showcasing <span class="highlight">9 live applications</span> across various domains.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#applications" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i> View Live Applications
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <i class="fas fa-paper-plane"></i> Get in Touch
-                    </a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">9</span>
-                        <span class="stat-label">Live Applications</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">7</span>
-                        <span class="stat-label">Custom Domains</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Production Ready</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="code-window">
-                    <div class="window-header">
-                        <div class="window-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <span class="window-title">portfolio.js</span>
-                    </div>
-                    <div class="window-content">
-                        <pre><code class="javascript">const developer = {
-  name: "Robin Pandey",
-  role: "Full Stack Developer",
-  expertise: [
-    "Web Applications",
-    "E-commerce Platforms",
-    "Business Solutions",
-    "Productivity Tools"
-  ],
-  status: "Building scalable solutions",
-  liveProjects: 9
-};</code></pre>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.ai-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
 
-    <!-- Applications Section -->
-    <section id="applications" class="applications">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Live Applications</h2>
-                <p class="section-subtitle">Production applications built and deployed across various platforms</p>
-            </div>
+.ai-tool {
+    padding: 4px 10px;
+    background: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
 
-            <!-- Filter Buttons -->
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="web-platform">Web Platforms</button>
-                <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
-                <button class="filter-btn" data-filter="productivity">Productivity</button>
-                <button class="filter-btn" data-filter="education">Education</button>
-            </div>
+/* Methodology Cards */
+.methodology-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
 
-            <!-- Projects Grid -->
-            <div class="projects-grid">
-                <!-- Apollo 18 Token Platform -->
-                <div class="project-card" data-category="web-platform" data-featured="true">
-                    <div class="project-header">
-                        <span class="project-badge featured">
-                            <i class="fas fa-star"></i> Featured
-                        </span>
-                        <span class="project-badge domain">
-                            <i class="fas fa-globe"></i> Custom Domain
-                        </span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Apollo 18 Token Platform</h3>
-                        <p class="project-description">
-                            Cryptocurrency token platform with blockchain integration and secure transactions.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Blockchain</span>
-                            <span class="tech-tag">Web3</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://apollo18token.com" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <span class="deployment-badge">
-                            <i class="fas fa-server"></i> Production
-                        </span>
-                    </div>
-                </div>
+.methodology-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
 
-                <!-- Mirror Meditation -->
-                <div class="project-card" data-category="productivity">
-                    <div class="project-header">
-                        <span class="project-badge wellness">
-                            <i class="fas fa-spa"></i> Wellness
-                        </span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Mirror Meditation</h3>
-                        <p class="project-description">
-                            Guided meditation application with mirror reflection techniques and progress tracking.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">Audio API</span>
-                            <span class="tech-tag">Netlify</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://venerable-melomakarona-594663.netlify.app/" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <span class="deployment-badge netlify">
-                            <i class="fab fa-netlify"></i> Netlify
-                        </span>
-                    </div>
-                </div>
+.methodology-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
 
-                <!-- Apollo Soccer Academy -->
-                <div class="project-card" data-category="web-platform education">
-                    <div class="project-header">
-                        <span class="project-badge domain">
-                            <i class="fas fa-globe"></i> Custom Domain
-                        </span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Apollo Soccer Academy</h3>
-                        <p class="project-description">
-                            Sports academy website with registration system, schedules, and team management.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Forms</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://apollosocceracademy.com" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <span class="deployment-badge">
-                            <i class="fas fa-server"></i> Production
-                        </span>
-                    </div>
-                </div>
+.methodology-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
 
-                <!-- Apollo Tunes -->
-                <div class="project-card" data-category="web-platform">
-                    <div class="project-header">
-                        <span class="project-badge domain">
-                            <i class="fas fa-globe"></i> Custom Domain
-                        </span>
-                        <span class="project-badge music">
-                            <i class="fas fa-music"></i> Music
-                        </span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Apollo Tunes</h3>
-                        <p class="project-description">
-                            Music streaming platform with playlist creation, audio player, and music discovery.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Audio API</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">PWA</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://apollotunes.com" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <span class="deployment-badge">
-                            <i class="fas fa-server"></i> Production
-                        </span>
-                    </div>
-                </div>
+.llm-list, .tool-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
 
-                <!-- EmbroidIt -->
-                <div class="project-card" data-category="ecommerce">
-                    <div class="project-header">
-                        <span class="project-badge domain">
-                            <i class="fas fa-globe"></i> Custom Domain
-                        </span>
-                        <span class="project-badge shop">
-                            <i class="fas fa-shopping-cart"></i> E-commerce
-                        </span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">EmbroidIt</h3>
-                        <p class="project-description">
-                            Custom embroidery e-commerce platform with design tool and order management.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">E-commerce</span>
-                            <span class="tech-tag">Design Tool</span>
-                            <span class="tech-tag">Payment API</span>
-                            <span class="tech-tag">.us Domain</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://embroidit.us" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <span class="deployment-badge">
-                            <i class="fas fa-server"></i> Production
-                        </span>
-                    </div>
-                </div>
+.llm-item, .tool-item {
+    padding: 6px 12px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
 
-                <!-- Apollo Technologies -->
-                <div class="project-card" data-category="web-platform">
-                    <div class="project-header">
-                        <span class="project-badge domain">
-                            <i class="fas fa-globe"></i> Custom Domain
-                        </span>
-                        <span class="project-badge business">
-                            <i class="fas fa-briefcase"></i> Business
-                        </span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Apollo Technologies</h3>
-                        <p class="project-description">
-                            Business technology solutions website with service showcase and client portal.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Business</span>
-                            <span class="tech-tag">Services</span>
-                            <span class="tech-tag">Corporate</span>
-                            <span class="tech-tag">Solutions</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://apollotechnologiesus.com" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <span class="deployment-badge">
-                            <i class="fas fa-server"></i> Production
-                        </span>
-                    </div>
-                </div>
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin: 3rem 0;
+}
 
-                <!-- OnlineMyBiz -->
-                <div class="project-card" data-category="web-platform">
-                    <div class="project-header">
-                        <span class="project-badge domain">
-                            <i class="fas fa-globe"></i> Custom Domain
-                        </span>
-                        <span class="project-badge portal">
-                            <i class="fas fa-portal"></i> Business Portal
-                        </span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">OnlineMyBiz</h3>
-                        <p class="project-description">
-                            Comprehensive business management portal with tools for small to medium enterprises.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Portal</span>
-                            <span class="tech-tag">Business Tools</span>
-                            <span class="tech-tag">Management</span>
-                            <span class="tech-tag">.net Domain</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://onlinemybiz.net" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <span class="deployment-badge">
-                            <i class="fas fa-server"></i> Production
-                        </span>
-                    </div>
-                </div>
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--primary);
+    opacity: 0.3;
+}
 
-                <!-- Apollo STEM Academy -->
-                <div class="project-card" data-category="education">
-                    <div class="project-header">
-                        <span class="project-badge education">
-                            <i class="fas fa-graduation-cap"></i> Education
-                        </span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Apollo STEM Academy</h3>
-                        <p class="project-description">
-                            Educational platform for STEM learning with interactive lessons and progress tracking.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Education</span>
-                            <span class="tech-tag">STEM</span>
-                            <span class="tech-tag">Learning</span>
-                            <span class="tech-tag">GitHub Pages</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://apolloat2022.github.io/ApolloStemAcademy" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <span class="deployment-badge github">
-                            <i class="fab fa-github"></i> GitHub Pages
-                        </span>
-                    </div>
-                </div>
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
 
-                <!-- To-Do Application -->
-                <div class="project-card" data-category="productivity">
-                    <div class="project-header">
-                        <span class="project-badge productivity">
-                            <i class="fas fa-tasks"></i> Productivity
-                        </span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">To-Do Application</h3>
-                        <p class="project-description">
-                            Modern task management application with drag & drop, categories, and local storage.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Local Storage</span>
-                            <span class="tech-tag">Drag & Drop</span>
-                            <span class="tech-tag">Vercel</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://todo-app-indol-seven-99.vercel.app" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <span class="deployment-badge vercel">
-                            <i class="fab fa-vercel"></i> Vercel
-                        </span>
-                    </div>
-                </div>
-            </div>
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.3rem;
+    top: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 3px solid var(--bg-primary);
+}
 
-            <!-- View All Button -->
-            <div class="text-center">
-                <a href="projects/" class="btn btn-outline">
-                    <i class="fas fa-list"></i> View All Case Studies
-                </a>
-            </div>
-        </div>
-    </section>
+.timeline-date {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
 
-    <!-- Tech Stack Section -->
-    <section class="tech-stack">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technology Stack</h2>
-                <p class="section-subtitle">Technologies used across all applications</p>
-            </div>
-            <div class="tech-grid">
-                <div class="tech-category">
-                    <h3><i class="fas fa-layer-group"></i> Frontend</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">React</span>
-                        <span class="tech-item">JavaScript</span>
-                        <span class="tech-item">HTML5</span>
-                        <span class="tech-item">CSS3</span>
-                        <span class="tech-item">TypeScript</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">Node.js</span>
-                        <span class="tech-item">Express</span>
-                        <span class="tech-item">Firebase</span>
-                        <span class="tech-item">APIs</span>
-                    </div>
-                </div>
-                <div class="tech-category">
-                    <h3><i class="fas fa-cloud-upload-alt"></i> Deployment</h3>
-                    <div class="tech-items">
-                        <span class="tech-item">Netlify</span>
-                        <span class="tech-item">Vercel</span>
-                        <span class="tech-item">GitHub Pages</span>
-                        <span class="tech-item">Custom Domains</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.timeline-content {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h2 class="section-title">About Robin Pandey</h2>
-                    <p>
-                        Full-Stack Developer, Solution Architect, and Product Manager specializing in building 
-                        production-ready web applications. With expertise across multiple domains including 
-                        e-commerce, business solutions, educational platforms, and productivity tools.
-                    </p>
-                    <p>
-                        I focus on creating applications that solve real problems and provide value to users. 
-                        Each project is built with attention to detail, scalability, and user experience.
-                    </p>
-                    <div class="about-points">
-                        <div class="point">
-                            <i class="fas fa-check-circle"></i>
-                            <span>9 production applications deployed</span>
-                        </div>
-                        <div class="point">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Custom domain expertise</span>
-                        </div>
-                        <div class="point">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Multiple deployment platforms</span>
-                        </div>
-                        <div class="point">
-                            <i class="fas fa-check-circle"></i>
-                            <span>End-to-end development</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="terminal">
-                        <div class="terminal-header">
-                            <span class="terminal-title">developer@robin-pandey:~</span>
-                        </div>
-                        <div class="terminal-content">
-                            <p>$ npm init application</p>
-                            <p>Initializing new project...</p>
-                            <p>✓ Frontend configured</p>
-                            <p>✓ Backend API ready</p>
-                            <p>✓ Database connected</p>
-                            <p>✓ Deployment setup</p>
-                            <p class="success">Application deployed successfully!</p>
-                            <p class="cursor">█</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.timeline-content h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Interested in collaboration or have a project in mind?</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-method">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>robpandeymba@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <p>https://github.com/Apolloat2022</p>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-code-branch"></i>
-                        <div>
-                            <h3>Projects</h3>
-                            <p>9 live applications available</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i> Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+.timeline-content h4 {
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Robin Pandey</h3>
-                    <p>Full-Stack Developer & Application Builder</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#applications">Applications</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-stats">
-                    <div class="stat">
-                        <span class="stat-number">9</span>
-                        <span>Live Apps</span>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; <span id="currentYear"></span> Robin Pandey. All applications are live and maintained.</p>
-            </div>
-        </div>
-    </footer>
+.timeline-content ul {
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+}
 
-    <script src="js/script.js"></script>
-</body>
-</html>
+.timeline-content li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.skill-category h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-items span {
+    padding: 6px 12px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Education & Certifications */
+.education-certifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.edu-item, .certifications {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.edu-item h4, .certifications h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.edu-item p {
+    color: var(--text-secondary);
+}
+
+.cert-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cert-item {
+    padding: 8px 16px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Contact info enhancements */
+.hero-contact {
+    margin: 1.5rem 0;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact-info span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.contact-info i {
+    color: var(--primary);
+}
