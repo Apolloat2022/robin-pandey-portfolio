@@ -527,7 +527,21 @@ body {
     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
     color: white;
 }
+/* Add these to your existing project-badge styles in css/style.css */
+.project-badge.cloud {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+}
 
+.project-badge.flask {
+    background: linear-gradient(135deg, #ffde57 0%, #3776ab 100%);
+    color: #333; /* Dark text for better contrast on yellow */
+}
+
+.project-badge.aws {
+    background: linear-gradient(135deg, #ff9900 0%, #146eb4 100%);
+    color: white;
+}
 .project-content {
     padding: 1rem;
     flex-grow: 1;
@@ -630,7 +644,11 @@ body {
     background: linear-gradient(135deg, #333333 0%, #000000 100%);
     color: white;
 }
-
+/* Also add a deployment badge style for PythonAnywhere */
+.deployment-badge.pythonanywhere {
+    background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%);
+    color: white;
+}
 .text-center {
     text-align: center;
 }
@@ -1228,4 +1246,51 @@ body {
     .hero-title {
         font-size: 3rem;
     }
+}
+
+/* AI & Automation Badges */
+.project-badge.cloud {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+}
+
+.project-badge.flask {
+    background: linear-gradient(135deg, #ffde57 0%, #3776ab 100%);
+    color: #333;
+}
+
+.project-badge.aws {
+    background: linear-gradient(135deg, #ff9900 0%, #146eb4 100%);
+    color: white;
+}
+
+.project-badge.vapi {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+}
+
+.project-badge.trillio {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+}
+
+.project-badge.vectorshift {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+}
+
+.project-badge.zapier {
+    background: linear-gradient(135deg, #ff4a00 0%, #e63e00 100%);
+    color: white;
+}
+
+.project-badge.huggingface {
+    background: linear-gradient(135deg, #ffd21e 0%, #ffc107 100%);
+    color: #333;
+}
+
+/* PythonAnywhere Deployment Badge */
+.deployment-badge.pythonanywhere {
+    background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%);
+    color: white;
 }
