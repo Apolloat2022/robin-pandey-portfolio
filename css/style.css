@@ -527,7 +527,7 @@ body {
     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
     color: white;
 }
-/* Add these to your existing project-badge styles in css/style.css */
+
 .project-badge.cloud {
     background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
@@ -535,13 +535,25 @@ body {
 
 .project-badge.flask {
     background: linear-gradient(135deg, #ffde57 0%, #3776ab 100%);
-    color: #333; /* Dark text for better contrast on yellow */
+    color: #333;
 }
 
 .project-badge.aws {
     background: linear-gradient(135deg, #ff9900 0%, #146eb4 100%);
     color: white;
 }
+
+/* New badge styles for BuildFolio */
+.project-badge.web-app {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.project-badge.portal {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
 .project-content {
     padding: 1rem;
     flex-grow: 1;
@@ -575,6 +587,46 @@ body {
     border-radius: 50px;
     font-size: 0.8rem;
     font-weight: 500;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.tech-tag:hover {
+    background-color: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Project features styling for BuildFolio */
+.project-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.feature {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.feature:hover {
+    border-color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.feature i {
+    color: var(--success);
+    font-size: 0.8rem;
 }
 
 .ai-tools {
@@ -592,6 +644,12 @@ body {
     font-size: 0.8rem;
     font-weight: 500;
     border: 1px solid rgba(139, 92, 246, 0.3);
+    transition: var(--transition);
+}
+
+.ai-tool:hover {
+    background: rgba(139, 92, 246, 0.2);
+    transform: translateY(-1px);
 }
 
 .project-footer {
@@ -644,11 +702,32 @@ body {
     background: linear-gradient(135deg, #333333 0%, #000000 100%);
     color: white;
 }
-/* Also add a deployment badge style for PythonAnywhere */
+
 .deployment-badge.pythonanywhere {
     background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%);
     color: white;
 }
+
+/* Impact rating styling for BuildFolio */
+.impact-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.impact-rating i {
+    color: #fbbf24;
+    font-size: 0.9rem;
+}
+
+.impact-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-left: 5px;
+    font-weight: 500;
+}
+
 .text-center {
     text-align: center;
 }
@@ -1134,6 +1213,19 @@ body {
         flex-direction: row;
         justify-content: space-around;
     }
+    
+    /* Update project footer for BuildFolio layout on tablet */
+    .project-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .impact-rating {
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: 0;
+    }
 }
 
 /* Desktop Styles */
@@ -1249,21 +1341,6 @@ body {
 }
 
 /* AI & Automation Badges */
-.project-badge.cloud {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-    color: white;
-}
-
-.project-badge.flask {
-    background: linear-gradient(135deg, #ffde57 0%, #3776ab 100%);
-    color: #333;
-}
-
-.project-badge.aws {
-    background: linear-gradient(135deg, #ff9900 0%, #146eb4 100%);
-    color: white;
-}
-
 .project-badge.vapi {
     background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
     color: white;
@@ -1287,10 +1364,4 @@ body {
 .project-badge.huggingface {
     background: linear-gradient(135deg, #ffd21e 0%, #ffc107 100%);
     color: #333;
-}
-
-/* PythonAnywhere Deployment Badge */
-.deployment-badge.pythonanywhere {
-    background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%);
-    color: white;
 }
