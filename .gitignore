@@ -12,6 +12,12 @@ vendor/
 # Environment
 .env
 
+# Copy files (Windows pattern)
+* - Copy*
+* copy*
+* Copy*
+Copy of *
+
 # OS
 .DS_Store
 Thumbs.db
