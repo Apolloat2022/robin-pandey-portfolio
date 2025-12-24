@@ -554,6 +554,22 @@ body {
     color: white;
 }
 
+/* AI RESUME OPTIMIZER BADGES */
+.project-badge.career-tools {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+}
+
+.project-badge.ai-powered {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    color: white;
+}
+
+.project-badge.serverless {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+}
+
 .project-content {
     padding: 1rem;
     flex-grow: 1;
@@ -1282,6 +1298,7 @@ body {
     
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
+        align-items: start; /* This is KEY for equal height cards */
     }
     
     .methodology-cards {
@@ -1365,3 +1382,23 @@ body {
     background: linear-gradient(135deg, #ffd21e 0%, #ffc107 100%);
     color: #333;
 }
+
+/* AI RESUME OPTIMIZER SPECIFIC STYLES - SAME AS BUILDOLIO */
+/* No special overrides needed - it uses the same base styles as BuildFolio */
+/* The badges are already defined above with other project-badge styles */
+
+/* Grid fix for desktop to ensure proper 3-column layout */
+@media (min-width: 1024px) {
+    .project-card[data-category*="career-tools"] {
+        grid-column: span 1;
+        height: auto;
+    }
+    
+    /* Ensure all cards align at the top and don't stretch */
+    .projects-grid {
+        align-items: start;
+    }
+}
+
+/* Optional: If Resume Optimizer is still too tall, reduce its content */
+/* The card should work with the same content as BuildFolio since they use the same CSS */
