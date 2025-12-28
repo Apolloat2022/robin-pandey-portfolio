@@ -1470,6 +1470,15 @@ body {
         align-items: start;
     }
 }
+/* Hardware Badge Styles */
+.project-badge.hardware {
+    background: rgba(243, 156, 18, 0.1);
+    color: #f39c12; /* A nice "Amber/Hardware" orange */
+}
 
+.deployment-badge.hardware {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
 /* Optional: If Resume Optimizer is still too tall, reduce its content */
 /* The card should work with the same content as BuildFolio since they use the same CSS */
