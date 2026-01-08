@@ -1480,5 +1480,31 @@ body {
     background: #2c3e50;
     color: #ecf0f1;
 }
+/* Project Link Styles - Add this if not already present */
+.project-link.live {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.project-link.live:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.project-link.github {
+    background: #24292e;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.project-link.github:hover {
+    background: #1a1e22;
+    transform: translateY(-2px);
+}
 /* Optional: If Resume Optimizer is still too tall, reduce its content */
 /* The card should work with the same content as BuildFolio since they use the same CSS */
