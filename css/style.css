@@ -1695,3 +1695,58 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Enhanced Mobile Responsiveness Overrides */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    .projects-grid {
+        gap: 1rem;
+    }
+    .project-card {
+        margin: 0;
+    }
+    .project-badge {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.5rem;
+    }
+    .tech-tag {
+        font-size: 0.7rem;
+    }
+    .stat-number {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ensure images and code windows don't cause overflow on mobile */
+.hero-image, .code-window, .window-content {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+/* Fix for overlapping badges in project cards */
+.project-header {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    gap: 4px;
+}
+
+/* Better vertical layout for small mobile screens */
+@media (max-width: 375px) {
+    .hero-content h1 {
+        font-size: 1.25rem;
+    }
+    .contact-info span {
+        font-size: 0.8rem;
+    }
+    .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+}
