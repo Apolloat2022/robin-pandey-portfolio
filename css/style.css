@@ -96,12 +96,17 @@ body {
     border: none;
     cursor: pointer;
     gap: 0.5rem;
-    width: auto; /* Changed from 100% to auto */
-    max-width: 100%; /* Changed from 300px to 100% */
+    width: auto;
+    /* Changed from 100% to auto */
+    max-width: 100%;
+    /* Changed from 300px to 100% */
     margin: 0.5rem auto;
-    white-space: normal; /* Added to allow text wrapping */
-    text-align: center; /* Added for better text alignment */
-    line-height: 1.4; /* Added for better line spacing */
+    white-space: normal;
+    /* Added to allow text wrapping */
+    text-align: center;
+    /* Added for better text alignment */
+    line-height: 1.4;
+    /* Added for better line spacing */
 }
 
 .btn-primary {
@@ -235,6 +240,135 @@ body {
     color: var(--text-primary);
     cursor: pointer;
     padding: 0.25rem;
+}
+
+/* --- Navigation & UI Refinements --- */
+
+/* Hide dropdown menu on PC by default */
+.dropdown-menu {
+    display: none;
+}
+
+/* Hide the chevron icon on desktop */
+@media screen and (min-width: 769px) {
+    .dropdown-trigger i {
+        display: none;
+    }
+}
+
+/* --- Mobile Accordion Styles (Max-width 768px) --- */
+@media screen and (max-width: 768px) {
+    .dropdown-menu.active {
+        display: block;
+        animation: slideDown 0.3s ease forwards;
+    }
+
+    .dropdown-menu {
+        background-color: rgba(0, 0, 0, 0.05);
+        /* Soft background for hierarchy */
+        margin: 10px -20px 10px -20px;
+        padding: 0;
+        list-style: none;
+    }
+
+    [data-theme="dark"] .dropdown-menu {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .dropdown-menu li a {
+        padding: 15px 40px;
+        /* Indented for hierarchy */
+        font-size: 0.9rem;
+        border-bottom: 1px solid var(--border);
+        color: var(--text-secondary);
+    }
+
+    .dropdown-trigger {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Rotate arrow when open */
+    .dropdown-item.open .dropdown-trigger i {
+        transform: rotate(180deg);
+        transition: transform 0.3s;
+    }
+}
+
+/* --- Filter Buttons Premium Glassmorphism --- */
+.filter-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.2rem;
+    background: rgba(var(--bg-card-rgb, 255, 255, 255), 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn:hover {
+    background: rgba(59, 130, 246, 0.1);
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.2);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4);
+}
+
+/* --- AI Methodology Badge Softened --- */
+.ai-methodology-badge {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+    color: #8b5cf6;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-align: center;
+    box-shadow: inset 0 0 20px rgba(139, 92, 246, 0.05);
+}
+
+.ai-methodology-badge i {
+    font-size: 1.2rem;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Hero Section - Mobile First */
@@ -374,9 +508,17 @@ body {
     border-radius: 50%;
 }
 
-.dot.red { background: #f87171; }
-.dot.yellow { background: #fbbf24; }
-.dot.green { background: #10b981; }
+.dot.red {
+    background: #f87171;
+}
+
+.dot.yellow {
+    background: #fbbf24;
+}
+
+.dot.green {
+    background: #10b981;
+}
 
 .window-title {
     color: var(--text-secondary);
@@ -424,15 +566,8 @@ body {
     flex-wrap: wrap;
 }
 
-.filter-buttons {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-    justify-content: center;
-    overflow-x: auto;
-    padding-bottom: 0.5rem;
-}
+/* Filter buttons are now styled with glassmorphism above */
+
 
 .filter-btn {
     padding: 0.5rem 1rem;
@@ -447,7 +582,8 @@ body {
     white-space: nowrap;
 }
 
-.filter-btn:hover, .filter-btn.active {
+.filter-btn:hover,
+.filter-btn.active {
     background: var(--primary);
     color: white;
     border-color: var(--primary);
@@ -471,7 +607,8 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0 0.25rem;
-    min-width: 0; /* FIX: Add this to prevent flexbox overflow */
+    min-width: 0;
+    /* FIX: Add this to prevent flexbox overflow */
 }
 
 .project-card:hover {
@@ -496,24 +633,30 @@ body {
     align-items: center;
     gap: 0.25rem;
     white-space: nowrap;
-    flex-shrink: 0; /* FIX: Add this to prevent badges from shrinking */
-    width: auto; /* ADD THIS to prevent stretching */
+    flex-shrink: 0;
+    /* FIX: Add this to prevent badges from shrinking */
+    width: auto;
+    /* ADD THIS to prevent stretching */
 }
 
 /* FIX for the Featured badge being only 1/3 wide */
 .project-header .project-badge.featured {
-    min-width: 80px; /* Ensure minimum width */
+    min-width: 80px;
+    /* Ensure minimum width */
     justify-content: center;
     flex-grow: 0;
     flex-shrink: 0;
-    width: auto; /* Ensure it doesn't stretch */
+    width: auto;
+    /* Ensure it doesn't stretch */
 }
 
 .project-badge.featured {
     background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
     color: white;
-    min-width: fit-content; /* FIX: Add this to prevent shrinking */
-    flex-shrink: 0; /* FIX: Add this to prevent shrinking */
+    min-width: fit-content;
+    /* FIX: Add this to prevent shrinking */
+    flex-shrink: 0;
+    /* FIX: Add this to prevent shrinking */
 }
 
 .project-badge.domain {
@@ -630,7 +773,8 @@ body {
 .project-content {
     padding: 1rem;
     flex-grow: 1;
-    min-width: 0; /* FIX: Add this to prevent flexbox overflow */
+    min-width: 0;
+    /* FIX: Add this to prevent flexbox overflow */
 }
 
 /* FIX: Fix for long project titles */
@@ -639,8 +783,10 @@ body {
     margin-bottom: 0.75rem;
     color: var(--text-primary);
     line-height: 1.3;
-    word-break: break-word; /* FIX: Add this to break long words */
-    overflow-wrap: break-word; /* FIX: Add this for better wrapping */
+    word-break: break-word;
+    /* FIX: Add this to break long words */
+    overflow-wrap: break-word;
+    /* FIX: Add this for better wrapping */
 }
 
 /* FIX: Fix for the project description text wrapping */
@@ -649,8 +795,10 @@ body {
     margin-bottom: 1rem;
     line-height: 1.5;
     font-size: 0.95rem;
-    word-break: break-word; /* FIX: Add this */
-    overflow-wrap: break-word; /* FIX: Add this */
+    word-break: break-word;
+    /* FIX: Add this */
+    overflow-wrap: break-word;
+    /* FIX: Add this */
 }
 
 /* FIX: Fix for the tech tags container */
@@ -659,7 +807,8 @@ body {
     flex-wrap: wrap;
     gap: 0.375rem;
     margin-bottom: 0.75rem;
-    align-items: flex-start; /* FIX: Changed from default */
+    align-items: flex-start;
+    /* FIX: Changed from default */
 }
 
 .tech-tag {
@@ -717,7 +866,8 @@ body {
     flex-wrap: wrap;
     gap: 0.375rem;
     margin-top: 0.75rem;
-    align-items: flex-start; /* FIX: Changed from default */
+    align-items: flex-start;
+    /* FIX: Changed from default */
 }
 
 .ai-tool {
@@ -744,7 +894,8 @@ body {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
-    flex-wrap: wrap; /* ADD THIS */
+    flex-wrap: wrap;
+    /* ADD THIS */
 }
 
 .project-link {
@@ -769,9 +920,12 @@ body {
     padding: 8px 16px;
     border-radius: 8px;
     transition: var(--transition);
-    width: fit-content; /* ADD THIS */
-    max-width: 100%; /* ADD THIS */
-    white-space: nowrap; /* Keep text on one line */
+    width: fit-content;
+    /* ADD THIS */
+    max-width: 100%;
+    /* ADD THIS */
+    white-space: nowrap;
+    /* Keep text on one line */
 }
 
 .deployment-badge {
@@ -880,7 +1034,8 @@ body {
     line-height: 1.5;
 }
 
-.llm-list, .tool-grid {
+.llm-list,
+.tool-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -888,7 +1043,8 @@ body {
     margin-top: 1rem;
 }
 
-.llm-item, .tool-item {
+.llm-item,
+.tool-item {
     padding: 0.5rem 0.875rem;
     background: var(--bg-secondary);
     border-radius: var(--radius-sm);
@@ -896,11 +1052,30 @@ body {
     font-weight: 500;
 }
 
-.llm-item.chatgpt { background: rgba(16, 163, 127, 0.1); color: #10a37f; }
-.llm-item.gemini { background: rgba(66, 133, 244, 0.1); color: #4285f4; }
-.llm-item.deepseek { background: rgba(0, 0, 0, 0.1); color: #000; }
-.llm-item.qwen { background: rgba(255, 87, 34, 0.1); color: #ff5722; }
-.llm-item.claude { background: rgba(139, 92, 246, 0.1); color: #8b5cf6; }
+.llm-item.chatgpt {
+    background: rgba(16, 163, 127, 0.1);
+    color: #10a37f;
+}
+
+.llm-item.gemini {
+    background: rgba(66, 133, 244, 0.1);
+    color: #4285f4;
+}
+
+.llm-item.deepseek {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+.llm-item.qwen {
+    background: rgba(255, 87, 34, 0.1);
+    color: #ff5722;
+}
+
+.llm-item.claude {
+    background: rgba(139, 92, 246, 0.1);
+    color: #8b5cf6;
+}
 
 .methodology-list {
     text-align: left;
@@ -1052,7 +1227,8 @@ body {
     margin-top: 2rem;
 }
 
-.edu-item, .certifications {
+.edu-item,
+.certifications {
     background: var(--bg-card);
     padding: 1.25rem;
     border-radius: var(--radius);
@@ -1060,7 +1236,8 @@ body {
     text-align: center;
 }
 
-.edu-item h4, .certifications h3 {
+.edu-item h4,
+.certifications h3 {
     color: var(--text-primary);
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
@@ -1259,64 +1436,64 @@ body {
     .container {
         padding: 0 1.5rem;
     }
-    
+
     .section-title {
         font-size: 2rem;
     }
-    
+
     .btn {
         width: auto;
         max-width: none;
         margin: 0.5rem;
     }
-    
+
     .hero-buttons {
         flex-direction: row;
         justify-content: center;
     }
-    
+
     .hero-stats {
         flex-direction: row;
         justify-content: center;
         gap: 2rem;
     }
-    
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .methodology-cards {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .contact-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .contact-method {
         flex-direction: row;
         text-align: left;
         align-items: flex-start;
     }
-    
+
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
         text-align: left;
     }
-    
+
     .footer-links {
         align-items: flex-start;
     }
-    
+
     .footer-stats {
         flex-direction: row;
         justify-content: space-around;
     }
-    
+
     /* Update project footer for BuildFolio layout on tablet */
     .project-footer {
         flex-direction: row;
@@ -1325,17 +1502,18 @@ body {
         align-items: center;
         gap: 0.75rem;
     }
-    
+
     .project-link.live {
-        margin-right: auto; /* Push other items to the right */
+        margin-right: auto;
+        /* Push other items to the right */
     }
-    
+
     .deployment-badge {
         margin-left: auto;
         margin-right: 1rem;
         align-self: auto;
     }
-    
+
     .impact-rating {
         margin-top: 0;
         margin-left: 0;
@@ -1349,62 +1527,63 @@ body {
     .container {
         padding: 0 2rem;
     }
-    
+
     .section-title {
         font-size: 2.5rem;
     }
-    
+
     .section-subtitle {
         font-size: 1.1rem;
     }
-    
+
     .hero .container {
         flex-direction: row;
         align-items: center;
     }
-    
+
     .hero-content {
         text-align: left;
         order: 1;
         flex: 1;
     }
-    
+
     .hero-image {
         order: 2;
         flex: 1;
     }
-    
+
     .hero-title {
         font-size: 2.5rem;
         text-align: left;
     }
-    
+
     .hero-subtitle {
         text-align: left;
         padding: 0;
     }
-    
+
     .contact-info {
         align-items: flex-start;
     }
-    
+
     .hero-buttons {
         justify-content: flex-start;
     }
-    
+
     .hero-stats {
         justify-content: flex-start;
     }
-    
+
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
-        align-items: start; /* This is KEY for equal height cards */
+        align-items: start;
+        /* This is KEY for equal height cards */
     }
-    
+
     .methodology-cards {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .nav-links {
         display: flex;
         position: static;
@@ -1414,51 +1593,62 @@ body {
         border: none;
         box-shadow: none;
     }
-    
+
     .nav-links a {
         border: none;
-        padding: 0.5rem;
+        padding: 0.5rem 0.8rem;
+        white-space: nowrap;
+        font-size: 0.9rem;
     }
-    
+
+    .logo {
+        font-size: 1.4rem;
+        margin-right: 1.5rem;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
     .nav-links a:hover {
         background: transparent;
     }
-    
+
     .menu-toggle {
         display: none;
     }
-    
+
     .timeline {
         padding-left: 2rem;
     }
-    
+
     .timeline-item::before {
         left: -2.1rem;
     }
-    
+
     .education-certifications {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .footer-content {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     /* Desktop project footer adjustments */
     .project-footer {
         flex-wrap: wrap;
         gap: 0.75rem;
         justify-content: space-between;
     }
-    
+
     .project-link {
         flex-shrink: 0;
     }
-    
+
     .deployment-badge {
         flex-shrink: 0;
     }
-    
+
     .impact-rating {
         width: auto;
         margin-top: 0;
@@ -1472,7 +1662,7 @@ body {
         max-width: 1200px;
         margin: 0 auto;
     }
-    
+
     .hero-title {
         font-size: 3rem;
     }
@@ -1514,7 +1704,7 @@ body {
         grid-column: span 1;
         height: auto;
     }
-    
+
     /* Ensure all cards align at the top and don't stretch */
     .projects-grid {
         align-items: start;
@@ -1524,7 +1714,8 @@ body {
 /* Hardware Badge Styles */
 .project-badge.hardware {
     background: rgba(243, 156, 18, 0.1);
-    color: #f39c12; /* A nice "Amber/Hardware" orange */
+    color: #f39c12;
+    /* A nice "Amber/Hardware" orange */
 }
 
 .deployment-badge.hardware {
@@ -1592,41 +1783,42 @@ body {
         padding: 0.75rem 1rem;
         line-height: 1.3;
     }
-    
+
     .project-title {
         font-size: 1.1rem;
         line-height: 1.25;
     }
-    
+
     .project-description {
         font-size: 0.9rem;
         line-height: 1.4;
     }
-    
+
     .project-badge {
         font-size: 0.7rem;
         padding: 0.2rem 0.6rem;
     }
-    
-    .tech-tag, .ai-tool {
+
+    .tech-tag,
+    .ai-tool {
         font-size: 0.75rem;
         padding: 0.2rem 0.6rem;
     }
-    
+
     .project-footer {
         gap: 0.75rem;
     }
-    
+
     .project-link.live {
         width: 100%;
         text-align: center;
         justify-content: center;
     }
-    
+
     .deployment-badge {
         align-self: flex-start;
     }
-    
+
     .impact-rating {
         width: 100%;
         justify-content: center;
@@ -1639,11 +1831,12 @@ body {
     .project-card {
         margin: 0;
     }
-    
+
     .project-content {
         padding: 1.25rem;
     }
 }
+
 /* --- AIRE Showcase Enhancements --- */
 
 /* Fix for Button Width and Sizing */
@@ -1702,29 +1895,37 @@ body {
     .hero-title {
         font-size: 1.5rem;
     }
+
     .hero-subtitle {
         font-size: 0.9rem;
     }
+
     .projects-grid {
         gap: 1rem;
     }
+
     .project-card {
         margin: 0;
     }
+
     .project-badge {
         font-size: 0.65rem;
         padding: 0.15rem 0.5rem;
     }
+
     .tech-tag {
         font-size: 0.7rem;
     }
+
     .stat-number {
         font-size: 1.5rem;
     }
 }
 
 /* Ensure images and code windows don't cause overflow on mobile */
-.hero-image, .code-window, .window-content {
+.hero-image,
+.code-window,
+.window-content {
     max-width: 100%;
     overflow-x: auto;
 }
@@ -1742,9 +1943,11 @@ body {
     .hero-content h1 {
         font-size: 1.25rem;
     }
+
     .contact-info span {
         font-size: 0.8rem;
     }
+
     .btn {
         padding: 0.75rem 1rem;
         font-size: 0.85rem;

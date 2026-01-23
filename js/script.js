@@ -55,12 +55,18 @@ if (menuToggle && navLinks) {
         menuToggle.setAttribute('aria-label', isActive ? 'Close menu' : 'Open menu');
     });
     
-    // Close menu when clicking links
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    // Close menu when clicking links (excluding dropdown triggers)
+    document.querySelectorAll('.nav-links a:not(.dropdown-trigger)').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
             menuToggle.setAttribute('aria-label', 'Open menu');
+            
+            // Also reset dropdowns
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const dropdownItem = document.querySelector('.dropdown-item');
+            if (dropdownMenu) dropdownMenu.classList.remove('active');
+            if (dropdownItem) dropdownItem.classList.remove('open');
         });
     });
     
@@ -70,6 +76,27 @@ if (menuToggle && navLinks) {
             navLinks.classList.remove('active');
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
             menuToggle.setAttribute('aria-label', 'Open menu');
+            
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const dropdownItem = document.querySelector('.dropdown-item');
+            if (dropdownMenu) dropdownMenu.classList.remove('active');
+            if (dropdownItem) dropdownItem.classList.remove('open');
+        }
+    });
+}
+
+// 1. Mobile Dropdown Toggle Logic
+const dropdownTrigger = document.querySelector('.dropdown-trigger');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+const dropdownItem = document.querySelector('.dropdown-item');
+
+if (dropdownTrigger) {
+    dropdownTrigger.addEventListener('click', (e) => {
+        // Only trigger click behavior on mobile screens
+        if (window.innerWidth <= 768) {
+            e.preventDefault(); // Stop it from jumping immediately
+            if (dropdownMenu) dropdownMenu.classList.toggle('active');
+            if (dropdownItem) dropdownItem.classList.toggle('open');
         }
     });
 }
@@ -106,6 +133,43 @@ filterButtons.forEach(button => {
         });
     });
 });
+
+// 2. The Smart Filter Function
+function activateFilter(category) {
+    // Close mobile nav if it's open
+    const navLinks = document.querySelector('.nav-links');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const dropdownItem = document.querySelector('.dropdown-item');
+    
+    if (navLinks && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        if (menuToggle) {
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            menuToggle.setAttribute('aria-label', 'Open menu');
+        }
+        // Reset the dropdown icon state
+        if (dropdownItem) dropdownItem.classList.remove('open');
+        if (dropdownMenu) dropdownMenu.classList.remove('active');
+    }
+
+    // Scroll smoothly to the section
+    const section = document.getElementById('applications');
+    if (section) {
+        window.scrollTo({
+            top: section.offsetTop - 80,
+            behavior: 'smooth'
+        });
+    }
+
+    // Wait 300ms for scroll to start, then trigger the filter
+    setTimeout(() => {
+        const filterBtn = document.querySelector(`.filter-btn[data-filter="${category}"]`);
+        if (filterBtn) {
+            filterBtn.click();
+        }
+    }, 300);
+}
 
 // Update current year in footer
 document.getElementById('currentYear').textContent = new Date().getFullYear();

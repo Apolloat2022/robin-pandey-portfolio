@@ -19,13 +19,28 @@
             <a href="/" class="logo">Robin Pandey</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#applications">Live Applications</a></li>
+
+                <li class="dropdown-item">
+                    <a href="#applications" class="dropdown-trigger">
+                        Live Applications <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#applications" onclick="activateFilter('featured')">Featured & SaaS</a></li>
+                        <li><a href="#applications" onclick="activateFilter('ai')">AI-Powered</a></li>
+                        <li><a href="#applications" onclick="activateFilter('web3')">Web3 & Blockchain</a></li>
+                        <li><a href="#applications" onclick="activateFilter('business')">Business Solutions</a></li>
+                        <li><a href="#applications" onclick="activateFilter('all')">View All Projects</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="#ai-expertise">AI Development</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button id="theme-toggle" aria-label="Toggle theme">
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle theme">
                         <i class="fas fa-moon"></i>
-                    </button></li>
+                    </button>
+                </li>
             </ul>
             <button class="menu-toggle" aria-label="Menu">
                 <i class="fas fa-bars"></i>
@@ -130,6 +145,17 @@
                 <i class="fas fa-robot"></i>
                 <span>All applications developed Antigravity, using Claude, ChatGPT, Gemini, DeepSeek, Kimi & Qwen with
                     prompt engineering</span>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="featured">Featured & SaaS</button>
+                <button class="filter-btn" data-filter="ai">AI-Powered</button>
+                <button class="filter-btn" data-filter="web3">Web3 & Blockchain</button>
+                <button class="filter-btn" data-filter="business">Business Solutions</button>
+                <button class="filter-btn" data-filter="productivity">Productivity</button>
+                <button class="filter-btn" data-filter="education">Education</button>
             </div>
 
             <!-- Projects Grid -->
