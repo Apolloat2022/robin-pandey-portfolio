@@ -1926,3 +1926,87 @@ body {
         font-size: 0.85rem;
     }
 }
+
+/* --- EmbroideryShop Elite Cinematic UI (Refined for Consistency) --- */
+.project-card.embroidery-elite {
+    background: var(--bg-card) !important;
+    border: 2px solid #d4af37 !important;
+    /* Premium Gold Border */
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15) !important;
+    /* Subtle Gold Glow */
+}
+
+/* Subtle gold top bar instead of dark theme overlay */
+.project-card.embroidery-elite::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #d4af37, #f9d71c, #d4af37);
+    z-index: 2;
+}
+
+.project-card.embroidery-elite .project-title {
+    background: linear-gradient(135deg, #b8860b 0%, #d4af37 50%, #b8860b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+
+/* Maintain readability on white/standard backgrounds */
+.project-card.embroidery-elite .project-description {
+    color: var(--text-secondary) !important;
+}
+
+.project-card.embroidery-elite .tech-tag {
+    background: rgba(212, 175, 55, 0.05) !important;
+    color: #b8860b !important;
+    border: 1px solid rgba(212, 175, 55, 0.2) !important;
+}
+
+.project-card.embroidery-elite .tech-tag:hover {
+    background: #d4af37 !important;
+    color: #fff !important;
+}
+
+.project-card.embroidery-elite .project-features li {
+    color: var(--text-secondary) !important;
+}
+
+.project-card.embroidery-elite .project-features i {
+    color: #d4af37 !important;
+}
+
+.project-card.embroidery-elite .project-badge.featured {
+    background: linear-gradient(135deg, #d4af37 0%, #f9d71c 100%) !important;
+    color: #fff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.project-card.embroidery-elite .project-link.primary {
+    background: linear-gradient(135deg, #d4af37 0%, #f9d71c 100%) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.project-card.embroidery-elite .project-link.primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5) !important;
+}
+
+.project-card.embroidery-elite .impact-rating i {
+    color: #d4af37 !important;
+}
+
+/* Ensure mobile responsiveness for the cinematic card */
+@media (max-width: 767px) {
+    .project-card.embroidery-elite {
+        margin: 0.5rem 0 !important;
+    }
+}
