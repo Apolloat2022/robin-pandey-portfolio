@@ -177,7 +177,7 @@ body {
 
 .nav-links {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 100%;
     left: 0;
     right: 0;
@@ -1561,6 +1561,10 @@ body {
         padding: 0;
         border: none;
         box-shadow: none;
+    }
+
+    .menu-toggle {
+        display: none;
     }
 
     .nav-links a {
