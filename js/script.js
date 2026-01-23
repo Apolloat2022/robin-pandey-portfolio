@@ -49,19 +49,19 @@ if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         const isActive = navLinks.classList.contains('active');
-        menuToggle.innerHTML = isActive 
-            ? '<i class="fas fa-times"></i>' 
+        menuToggle.innerHTML = isActive
+            ? '<i class="fas fa-times"></i>'
             : '<i class="fas fa-bars"></i>';
         menuToggle.setAttribute('aria-label', isActive ? 'Close menu' : 'Open menu');
     });
-    
+
     // Close menu when clicking links (excluding dropdown triggers)
     document.querySelectorAll('.nav-links a:not(.dropdown-trigger)').forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
             menuToggle.setAttribute('aria-label', 'Open menu');
-            
+
             // Also reset dropdowns
             const dropdownMenu = document.querySelector('.dropdown-menu');
             const dropdownItem = document.querySelector('.dropdown-item');
@@ -69,14 +69,14 @@ if (menuToggle && navLinks) {
             if (dropdownItem) dropdownItem.classList.remove('open');
         });
     });
-    
+
     // Close menu when clicking outside
     document.addEventListener('click', (event) => {
         if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
             navLinks.classList.remove('active');
             menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
             menuToggle.setAttribute('aria-label', 'Open menu');
-            
+
             const dropdownMenu = document.querySelector('.dropdown-menu');
             const dropdownItem = document.querySelector('.dropdown-item');
             if (dropdownMenu) dropdownMenu.classList.remove('active');
@@ -111,12 +111,12 @@ filterButtons.forEach(button => {
         filterButtons.forEach(btn => btn.classList.remove('active'));
         // Add active class to clicked button
         button.classList.add('active');
-        
+
         const filterValue = button.getAttribute('data-filter');
-        
+
         projectCards.forEach(card => {
             const categories = card.getAttribute('data-category').split(' ');
-            
+
             if (filterValue === 'all' || categories.includes(filterValue)) {
                 card.style.display = 'flex';
                 setTimeout(() => {
@@ -141,7 +141,7 @@ function activateFilter(category) {
     const menuToggle = document.querySelector('.menu-toggle');
     const dropdownMenu = document.querySelector('.dropdown-menu');
     const dropdownItem = document.querySelector('.dropdown-item');
-    
+
     if (navLinks && navLinks.classList.contains('active')) {
         navLinks.classList.remove('active');
         if (menuToggle) {
@@ -177,23 +177,23 @@ document.getElementById('currentYear').textContent = new Date().getFullYear();
 // Form Submission - Formspree Integration
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', function (e) {
         const submitButton = this.querySelector('button[type="submit"]');
         const originalText = submitButton.innerHTML;
-        
+
         // Show loading state
         submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitButton.disabled = true;
-        
+
         // Formspree will handle the actual submission
         // No need for e.preventDefault() - let the form submit to Formspree
-        
+
         // Reset button state after form submission
         setTimeout(() => {
             // This runs after Formspree processes the form
             if (this.checkValidity()) {
                 submitButton.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-                
+
                 // Optional: Reset form after success
                 setTimeout(() => {
                     submitButton.innerHTML = originalText;
@@ -206,7 +206,7 @@ if (contactForm) {
                 submitButton.disabled = false;
             }
         }, 500);
-        
+
         // Note: Formspree will redirect to their success page
         // You can customize this in Formspree dashboard settings
     });
@@ -215,11 +215,16 @@ if (contactForm) {
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        // Prevent smooth scroll logic from interfering with mobile dropdown toggle
+        if (this.classList.contains('dropdown-trigger') && window.innerWidth <= 768) {
+            return;
+        }
+
         e.preventDefault();
-        
+
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
             // Close mobile menu if open
@@ -230,7 +235,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                     menuToggle.setAttribute('aria-label', 'Open menu');
                 }
             }
-            
+
             window.scrollTo({
                 top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
@@ -268,7 +273,7 @@ if (window.matchMedia('(hover: hover)').matches) {
         card.addEventListener('mouseenter', () => {
             card.style.transform = 'translateY(-8px)';
         });
-        
+
         card.addEventListener('mouseleave', () => {
             if (!card.style.display || card.style.display !== 'none') {
                 card.style.transform = 'translateY(0)';

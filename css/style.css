@@ -19,6 +19,7 @@
     --radius: 12px;
     --radius-sm: 8px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bg-card-rgb: 255, 255, 255;
 }
 
 [data-theme="dark"] {
@@ -26,6 +27,7 @@
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
     --bg-card: #1e293b;
+    --bg-card-rgb: 30, 41, 59;
     --text-primary: #f1f5f9;
     --text-secondary: #cbd5e1;
     --text-tertiary: #94a3b8;
@@ -185,6 +187,8 @@ body {
     border-bottom: 1px solid var(--border);
     box-shadow: var(--shadow);
     z-index: 999;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
 }
 
 .nav-links.active {
@@ -550,44 +554,9 @@ body {
     background: var(--bg-secondary);
 }
 
-.ai-methodology-badge {
-    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
-    color: white;
-    padding: 0.875rem 1rem;
-    border-radius: var(--radius);
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    font-weight: 500;
-    font-size: 0.9rem;
-    text-align: center;
-    flex-wrap: wrap;
-}
 
 /* Filter buttons are now styled with glassmorphism above */
 
-
-.filter-btn {
-    padding: 0.5rem 1rem;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 50px;
-    color: var(--text-secondary);
-    font-weight: 500;
-    font-size: 0.85rem;
-    cursor: pointer;
-    transition: var(--transition);
-    white-space: nowrap;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-}
 
 /* Projects Grid - Mobile First */
 .projects-grid {
