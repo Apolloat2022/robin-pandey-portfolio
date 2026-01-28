@@ -561,23 +561,27 @@ body {
 /* Projects Grid - Mobile First */
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+    /* CRITICAL: Forces neighbors to be equal height */
     margin-bottom: 2rem;
 }
 
 .project-card {
+    height: 100%;
+    /* Fills the grid space */
+    display: flex;
+    flex-direction: column;
+    /* Stacks content vertically */
     background: var(--bg-card);
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
     border: 1px solid var(--border);
-    display: flex;
-    flex-direction: column;
-    margin: 0 0.25rem;
+    margin: 0;
     min-width: 0;
-    /* FIX: Add this to prevent flexbox overflow */
 }
 
 .project-card:hover {
@@ -740,10 +744,10 @@ body {
 }
 
 .project-content {
-    padding: 1rem;
     flex-grow: 1;
+    /* Pushes the footer down to fill empty space */
+    padding: 1.5rem;
     min-width: 0;
-    /* FIX: Add this to prevent flexbox overflow */
 }
 
 /* FIX: Fix for long project titles */
@@ -1432,9 +1436,6 @@ body {
         gap: 2rem;
     }
 
-    .projects-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     .methodology-cards {
         grid-template-columns: repeat(2, 1fr);
@@ -1548,11 +1549,6 @@ body {
         justify-content: flex-start;
     }
 
-    .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
-        align-items: start;
-        /* This is KEY for equal height cards */
-    }
 
     .methodology-cards {
         grid-template-columns: repeat(3, 1fr);
