@@ -929,6 +929,11 @@ body {
     color: white;
 }
 
+.deployment-badge.python {
+    background: linear-gradient(135deg, #3776ab 0%, #ffde57 100%);
+    color: white;
+}
+
 /* Impact rating styling for BuildFolio */
 .impact-rating {
     display: flex;
