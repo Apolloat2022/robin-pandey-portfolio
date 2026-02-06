@@ -1502,6 +1502,20 @@ body {
         flex-direction: row;
         justify-content: center;
         width: 100%;
+        gap: 1rem;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        flex: 1;
+        max-width: 250px;
+        margin: 0;
+        white-space: nowrap;
+        height: auto;
+    }
+
+    .hero-buttons .btn-icon {
+        flex: 0 0 48px;
     }
 
     .hero-stats-container {
