@@ -1260,8 +1260,7 @@ body {
     margin-top: 2rem;
 }
 
-.edu-item,
-.certifications {
+.edu-item {
     background: var(--bg-card);
     padding: 1.25rem;
     border-radius: var(--radius);
@@ -1269,8 +1268,7 @@ body {
     text-align: center;
 }
 
-.edu-item h4,
-.certifications h3 {
+.edu-item h4 {
     color: var(--text-primary);
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
@@ -1290,14 +1288,23 @@ body {
 }
 
 .cert-item {
-    padding: 0.75rem 1.25rem;
-    background: var(--bg-secondary);
-    border-radius: var(--radius-sm);
+    padding: 1.25rem;
+    background: var(--bg-card);
+    border-radius: var(--radius);
     font-weight: 500;
     color: var(--text-primary);
     font-size: 0.95rem;
     width: 100%;
-    max-width: 300px;
+    /* max-width removed to fill grid column */
+    border: 1px solid var(--border);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.cert-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
 }
 
 /* Contact Section */
