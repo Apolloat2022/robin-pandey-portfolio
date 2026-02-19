@@ -1288,17 +1288,17 @@ body {
 }
 
 .cert-item {
-    padding: 1.25rem;
     background: var(--bg-card);
+    padding: 1.25rem;
     border-radius: var(--radius);
-    font-weight: 500;
-    color: var(--text-primary);
-    font-size: 0.95rem;
-    width: 100%;
-    /* max-width removed to fill grid column */
     border: 1px solid var(--border);
     text-align: center;
-    transition: var(--transition);
+}
+
+.cert-item h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
 
 .cert-item:hover {
