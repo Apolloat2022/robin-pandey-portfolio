@@ -450,8 +450,8 @@ body {
 .hero-buttons {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+    gap: 0.75rem;
+    align-items: stretch;
     margin-bottom: 3rem;
 }
 
@@ -466,6 +466,7 @@ body {
     color: var(--text-primary);
     border: 1px solid var(--border);
     transition: var(--transition);
+    align-self: center;
 }
 
 .btn-icon:hover {
@@ -1507,15 +1508,15 @@ body {
 
     .hero-buttons {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         width: 100%;
-        gap: 1rem;
-        align-items: stretch;
+        gap: 0.75rem;
+        align-items: center;
     }
 
     .hero-buttons .btn {
-        flex: 1;
-        max-width: 250px;
+        flex: 0 1 auto;
         margin: 0;
         white-space: nowrap;
         height: auto;
@@ -1616,7 +1617,7 @@ body {
     .hero-content {
         text-align: left;
         order: 1;
-        flex: 1.2;
+        flex: 1;
     }
 
     .hero-image {
@@ -1640,6 +1641,7 @@ body {
 
     .hero-buttons {
         justify-content: flex-start;
+        flex-wrap: wrap;
     }
 
     .hero-stats-container {
