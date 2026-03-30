@@ -1308,6 +1308,23 @@ body {
     border-color: var(--primary);
 }
 
+.cert-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: var(--transition);
+}
+
+.cert-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
 /* Contact Section */
 .contact {
     padding: 3rem 0;
