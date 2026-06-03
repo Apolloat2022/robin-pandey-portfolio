@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robin Pandey | AI-Assisted Full Stack Developer Portfolio</title>
+    <title>Robin Pandey | AI-Assisted Full Stack Builder Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
@@ -35,6 +35,7 @@
 
                 <li><a href="#ai-expertise">AI Development</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="https://robinpandey.wordpress.com/" target="_blank">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
                     <button id="theme-toggle" aria-label="Toggle theme">
@@ -75,8 +76,15 @@
                     <a href="#applications" class="btn btn-primary">
                         <i class="fas fa-rocket"></i> View 23+ Live Apps
                     </a>
+                    <a href="certificates.html" class="btn btn-secondary">
+                        <i class="fas fa-certificate"></i> My Certificates
+                    </a>
                     <a href="#contact" class="btn btn-secondary">
                         <i class="fas fa-paper-plane"></i> Get in Touch
+                    </a>
+                    <a href="https://s3.us-east-1.amazonaws.com/robin.pandey.aws.showcase/index.html" target="_blank"
+                        class="btn btn-secondary">
+                        <i class="fab fa-aws"></i> AWS Showcase
                     </a>
                     <a href="https://linkedin.com/in/robinpandey" target="_blank" class="btn btn-icon">
                         <i class="fab fa-linkedin"></i>
@@ -114,7 +122,7 @@
                         <pre><code class="javascript">const developer = {
   name: "Robin Pandey",
   roles: [
-    "AI-Assisted Full Stack Developer",
+    "AI-Assisted Full Stack Builder",
     "Solution Architect", 
     "Senior Product Manager"
   ],
@@ -163,6 +171,391 @@
 
             <!-- Projects Grid -->
             <div class="projects-grid">
+                <!-- InsurAgent AI Project Card -->
+                <div class="project-card" data-category="web-app ai-powered featured business" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
+                        <span class="project-badge business"><i class="fas fa-shield-alt"></i> Insurance</span>
+                        <span class="project-badge web-app"><i class="fas fa-laptop-code"></i> Web App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">InsurAgent AI "Corpus": Policy-Aware Coverage Intelligence</h3>
+                        <p class="project-description">
+                            An intelligent insurance analysis system that transforms complex carrier PDF documents into queryable knowledge graphs with real-time source citations and deterministic quote generation. Built on a production-grade RAG architecture with ChromaDB persistence and FastAPI serving. When an agent uploads a policy PDF, the system parses tables and clauses via PyMuPDF, applies a Parent-Child chunking strategy with Cross-Encoder re-ranking to surface the most relevant coverage sections, and routes queries through a LangGraph agent that decides between semantic policy search and Python-calculated quotes — all rendered through a Liquid Glass HUD dashboard with live citation tracing back to the exact page and paragraph.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">ChromaDB</span>
+                            <span class="tech-tag">LangGraph</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Groq LLM</span>
+                        </div>
+                        <div class="project-tech" style="margin-top: 10px;">
+                            <span class="tech-tag">PyMuPDF</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                        <div class="project-features" style="margin-top: 10px;">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Parent-Child Retrieval</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Cross-Encoder Re-Ranking</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Agentic Tool Routing</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Source Citations</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Quote Calculation Engine</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> RAGAS Evaluation</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> PDF Table Extraction</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Vector Similarity Search</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://rag-llm-demo.vercel.app/" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Production
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-server"></i> Vercel + Render | Free Tier
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Insurance & LegalTech</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- DeepFocus AI Project Card -->
+                <div class="project-card" data-category="web-app productivity ai-powered" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
+                        <span class="project-badge productivity"><i class="fas fa-bolt"></i> Productivity</span>
+                        <span class="project-badge web-app"><i class="fas fa-laptop-code"></i> Web App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">DeepFocus AI "Genesis": Neural-Focused Work Intelligence</h3>
+                        <p class="project-description">
+                            An intelligent focus optimization system that transforms scattered work sessions into structured cognitive sprints with real-time hurdle detection and digital twin visualization. Built on a scalable architecture with PostgreSQL persistence and FastAPI serving. When a user initiates a focus session, the system captures sprint data, applies LLM-generated puzzle logic to detect cognitive obstacles, and maps performance metrics to a 3D "biological brain" model — all orchestrated through a defined implementation pipeline from schema design to final technical walkthrough.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">3D Digital Twin</span>
+                            <span class="tech-tag">WebSockets</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">GitHub</span>
+                        </div>
+                        <div class="project-tech" style="margin-top: 10px;">
+                            <span class="tech-tag">LLM Integration</span>
+                            <span class="tech-tag">Edge Layer Processing</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Focus Session Tracking</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Cognitive Load Analytics</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Hurdle Detection Logic</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Neural Map Visualization</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Sprint Validation</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://attention-builder.vercel.app/" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Production
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-cloud"></i> Local + Cloud &nbsp;|&nbsp; $
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Productivity Impact</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- Interactive Learning Academy Project Card -->
+                <div class="project-card" data-category="web-app education ai-powered" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge education"><i class="fas fa-graduation-cap"></i> Education</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
+                        <span class="project-badge web-app"><i class="fas fa-laptop-code"></i> Web App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Apollo's Agentic AI: Interactive Learning Academy</h3>
+                        <p class="project-description">
+                            A comprehensive digital learning platform designed for developers, product managers, and decision-makers to master orchestrating intelligent agent behaviors. The platform features an interactive curriculum, a dynamic "live sandbox" UI, secure progress tracking, and an automated final exam credentialing system.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js 15</span>
+                            <span class="tech-tag">Clerk Auth (v7)</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Prisma ORM</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-tech" style="margin-top: 10px;">
+                            <span class="tech-tag">Framer Motion</span>
+                            <span class="tech-tag">React Spring</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                        <div class="ai-tools" style="margin-top: 10px;">
+                            <span class="ai-tool">Agentic Workflows</span>
+                            <span class="ai-tool">RAG Concepts</span>
+                            <span class="ai-tool">Multi-Agent Orchestration</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature">🛡️ Secure Clerk Authentication</span>
+                            <span class="feature">📊 Persistent Progress Tracking</span>
+                            <span class="feature">🎓 Automated Certification Exams</span>
+                            <span class="feature">💻 Dynamic Terminal Sandbox UI</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://agentic-ai-course-umber.vercel.app/" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Production
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-globe"></i> Next.js App Router
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Platform Grade</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- Apollo Enrollment Engine Project Card -->
+                <div class="project-card" data-category="ai-powered education web-app" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
+                        <span class="project-badge education"><i class="fas fa-music"></i> Education</span>
+                        <span class="project-badge web-app"><i class="fas fa-laptop-code"></i> Web App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Apollo Enrollment Engine: AI-Powered Music School Automation</h3>
+                        <p class="project-description">
+                            A fully automated enrollment pipeline for Apollo Performing Arts &amp; Academy that converts
+                            trial lesson bookings into personalized Gmail drafts with <strong>zero manual data
+                            entry</strong>. Built entirely on free tools with no monthly SaaS fees. When a Calendly
+                            booking arrives, the system extracts parent and student information using the Groq AI API,
+                            builds a personalized enrollment email from a dynamic template, and creates a ready-to-send
+                            Gmail draft — all triggered from a <strong>password-protected web dashboard</strong>
+                            accessible from any device.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Groq AI</span>
+                            <span class="tech-tag">Gmail API</span>
+                            <span class="tech-tag">Google OAuth</span>
+                            <span class="tech-tag">PythonAnywhere</span>
+                            <span class="tech-tag">GitHub</span>
+                            <span class="tech-tag">Calendly</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> AI Email Extraction</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Gmail Draft Automation</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Mobile-Friendly Dashboard</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Calendly Integration</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Walk-in &amp; Phone Booking Support</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Booking History Log</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://robinpandey.pythonanywhere.com/admin" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Dashboard
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-cloud"></i> Local + Cloud &nbsp;|&nbsp; $0/mo
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Operational Impact</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- Apollo Tax Project Card -->
+                <div class="project-card" data-category="ai-powered web-app featured business" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-shield-alt"></i> Privacy-First</span>
+                        <span class="project-badge business"><i class="fas fa-file-invoice-dollar"></i> CPA-Grade</span>
+                        <span class="project-badge cloud"><i class="fab fa-docker"></i> Local Docker</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Apollo Tax: The Privacy-First Business Command Center</h3>
+                        <p class="project-description">
+                            A <strong>CPA-grade multi-entity orchestrator</strong> for S-Corps and LLCs that prioritizes
+                            data sovereignty.
+                            By utilizing a <strong>local-first Docker architecture</strong>, the platform ensures
+                            sensitive
+                            corporate financials, EINs, and shareholder PII never touch the cloud—keeping your data
+                            strictly on your company PC.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js 15</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Docker Compose</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Pydantic</span>
+                            <span class="tech-tag">pdfrw</span>
+                            <span class="tech-tag">JSON Persistence</span>
+                        </div>
+                        <div class="ai-tools">
+                            <span class="ai-tool">Claude 3.5 Sonnet</span>
+                            <span class="ai-tool">Gemini 3.1 Pro</span>
+                            <span class="ai-tool">Agentic Workflows</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Local Docker Node</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> OBBBA 2025 Logic</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> 6-Shareholder Matrix</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Audit-Shield Guardrails</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Decoupled Showcase</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Non-Root Security</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://frontend-apollo-tech1.vercel.app/" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Production
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fab fa-docker"></i> Docker Local
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Privacy Grade</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- Shadow Trader Project Card -->
+                <div class="project-card" data-category="ai-powered web-app featured business cloud"
+                    data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
+                        <span class="project-badge business"><i class="fas fa-chart-line"></i> Fintech</span>
+                        <span class="project-badge cloud"><i class="fab fa-aws"></i> AWS Cloud</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Shadow Trader: AI-Driven Quant Intelligence</h3>
+                        <p class="project-description">
+                            An end-to-end Medallion data pipeline (Bronze/Silver/Gold) that automates Bitcoin
+                            trend-following strategies. The app identifies 🟢 BULLISH and 🔴 BEARISH signals by
+                            processing 15+ years of market data through an automated AWS Lambda and S3 ecosystem.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AWS S3</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">Boto3</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Plotly</span>
+                            <span class="tech-tag">AlphaVantage API</span>
+                        </div>
+                        <div class="ai-tools">
+                            <span class="ai-tool">Claude 4.6</span>
+                            <span class="ai-tool">Gemini 3.1 Pro</span>
+                            <span class="ai-tool">GPT-OSS 120B</span>
+                            <span class="ai-tool">Agentic Workflows</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Live Coinbase Integration</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Dynamic SMA Lab</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Fully Serverless
+                                Architecture</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Multi-LLM Strategy</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://apollo-shadow-trader.streamlit.app/" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Production
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-server"></i> Serverless
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Quant Impact</span>
+                        </span>
+                    </div>
+                </div>
+                <!-- Digital Twin (Stable Edition) -->
+                <div class="project-card" data-category="ai-powered web-app featured" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Augmented</span>
+                        <span class="project-badge web-app"><i class="fas fa-cube"></i> 3D Digital Twin</span>
+                        <span class="project-badge business"><i class="fas fa-microchip"></i> High-Stability</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Digital Twin (Stable Edition)</h3>
+                        <p class="project-description">
+                            A high-fidelity 3D Digital Twin application optimized for <b>Maximum Stability</b> and
+                            Performance. This version ensures reliable rendering across all hardware and browsers using
+                            industry-standard stable shaders and a direct rendering pipeline.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Three.js</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Vite</span>
+                            <span class="tech-tag">Standard Shaders</span>
+                            <span class="tech-tag">Glassmorphism</span>
+                        </div>
+                        <div class="ai-tools">
+                            <span class="ai-tool">Antigravity AI</span>
+                            <span class="ai-tool">Claude Sonnet</span>
+                            <span class="ai-tool">ChatGPT-o1</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Maximum Stability
+                                Architecture</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> High-End Glassmorphism UI</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Cinematic Ambient Lighting</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Neural Core Anatomy
+                                Visualization</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Auto-Rotation & Manual
+                                Orbit</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Optimized for Mobile & Legacy
+                                GPUs</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://digital-twin-human-body-b06l6p9xz-apollo-tech1.vercel.app" target="_blank"
+                            class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Production
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-bolt"></i> Verified Fix
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Stability Grade</span>
+                        </span>
+                    </div>
+                </div>
                 <!-- Latent Job Board -->
                 <div class="project-card" data-category="web-app business saas" data-featured="true">
                     <div class="project-header">
@@ -383,7 +776,7 @@
                         </div>
                     </div>
                     <div class="project-footer">
-                        <a href="https://robinpandey.pythonanywhere.com/" target="_blank" class="project-link live">
+                        <a href="" target="_blank" class="project-link live">
                             <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
                         <span class="deployment-badge pythonanywhere">
@@ -813,39 +1206,38 @@
                     </div>
                 </div>
 
-                <!-- Apollo Tunes -->
+                <!-- Apollo Performing Arts -->
                 <div class="project-card" data-category="business">
                     <div class="project-header">
                         <span class="project-badge business">
                             <i class="fas fa-briefcase"></i> Business
                         </span>
                         <span class="project-badge media">
-                            <i class="fas fa-music"></i> Media Platform
+                            <i class="fas fa-music"></i> Education
                         </span>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Apollo Tunes</h3>
+                        <h3 class="project-title">Apollo Performing Arts & Academy</h3>
                         <p class="project-description">
-                            Music streaming platform with playlist creation, audio player, and content management.
-                            Built using AI-assisted development techniques.
+                            Premier music education platform in Prosper, TX offering professional instruction across various instruments. Built using modern web technologies and AI-assisted design.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Audio API</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">AOS Animation</span>
                         </div>
                         <div class="project-features">
-                            <span class="feature"><i class="fas fa-check-circle"></i> Lossless Audio Stream</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Custom Playlist Logic</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Background Playback</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Artist Dashboard</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Real-time Analytics</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> PWA Offline Mode</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> SEO Optimization</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Responsive UI</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Interactive Gallery</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Calendly Integration</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Schema.org Structured Data</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Embedded Video Showcase</span>
                         </div>
                     </div>
                     <div class="project-footer">
-                        <a href="https://apollotunes.com" target="_blank" class="project-link live">
+                        <a href="https://apolloperformingarts.com" target="_blank" class="project-link live">
                             <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
                         <span class="deployment-badge">
@@ -1134,10 +1526,9 @@
                         <span class="project-badge ecommerce">
                             <i class="fas fa-shopping-cart"></i> E-commerce
                         </span>
-                        <span class="project-badge custom">
-                            <i class="fas fa-palette"></i> Custom Design
                         </span>
                     </div>
+                    <!-- Removed closing div -->
                     <div class="project-content">
                         <h3 class="project-title">EmbroidIt</h3>
                         <p class="project-description">
@@ -1170,6 +1561,7 @@
                     </div>
                 </div>
 
+
                 <!-- EmbroideryShop Elite – Digitizing Service -->
                 <div class="project-card embroidery-elite" data-category="web-app business ai-powered"
                     data-featured="true">
@@ -1183,9 +1575,12 @@
                     <div class="project-content">
                         <h3 class="project-title">EmbroideryShop Elite – Digitizing Service</h3>
                         <p class="project-description">
-                            A premium embroidery digitizing platform featuring a cinematic gold-themed UI. Built with
-                            agentic precision to provide an elite ordering experience. Integrated with Stripe for secure
-                            payments and automated SMTP services for instant file delivery to the embroidery production
+                            A premium embroidery digitizing platform featuring a cinematic gold-themed UI. Built
+                            with
+                            agentic precision to provide an elite ordering experience. Integrated with Stripe for
+                            secure
+                            payments and automated SMTP services for instant file delivery to the embroidery
+                            production
                             team.
                         </p>
 
@@ -1201,7 +1596,8 @@
                         <div class="project-features">
                             <span class="feature"><i class="fas fa-check-circle"></i> Secure Stripe Checkout</span>
                             <span class="feature"><i class="fas fa-check-circle"></i> Automated Logo Delivery</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Persistent Order History</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Persistent Order
+                                History</span>
                             <span class="feature"><i class="fas fa-check-circle"></i> Cinematic Gold Theme UI</span>
                             <span class="feature"><i class="fas fa-check-circle"></i> Real-time Validation</span>
                             <span class="feature"><i class="fas fa-check-circle"></i> Dynamic Pricing Engine</span>
@@ -1223,7 +1619,8 @@
                                     <i class="fas fa-star" style="color: #d4af37;"></i>
                                     <i class="fas fa-star" style="color: #d4af37;"></i>
                                     <span class="impact-label"
-                                        style="font-size: 0.8rem; color: #64748b; margin-left: 5px;">Visual Grade</span>
+                                        style="font-size: 0.8rem; color: #64748b; margin-left: 5px;">Visual
+                                        Grade</span>
                                 </div>
                             </div>
                         </div>
@@ -1231,6 +1628,7 @@
                 </div>
 
             </div>
+        </div>
         </div>
     </section>
 
@@ -1347,7 +1745,7 @@
                 <div class="timeline-item">
                     <div class="timeline-date">Oct 2021 - Present</div>
                     <div class="timeline-content">
-                        <h3>AI-Assisted Full Stack Developer, Solution Architect & Senior Product Manager</h3>
+                        <h3>AI-Assisted Full Stack Builder, Solution Architect & Senior Product Manager</h3>
                         <h4>Apollo Technologies US Inc., Frisco, Texas</h4>
                         <ul>
                             <li>Architect and deploy complete web applications using AI development workflows with
@@ -1365,7 +1763,7 @@
                 <div class="timeline-item">
                     <div class="timeline-date">Sep 2017 - Present</div>
                     <div class="timeline-content">
-                        <h3>AI-Assisted Developer and Product Director</h3>
+                        <h3>AI-Assisted Builder and Product Director</h3>
                         <h4>Apollo Performing Arts and Academy, Frisco, Texas</h4>
                         <ul>
                             <li>Drive digital transformation by implementing AI-generated web solutions</li>
@@ -1419,76 +1817,94 @@
 
                 <div class="certifications">
                     <h3><i class="fas fa-certificate"></i> Certifications</h3>
-                    <div class="cert-grid">
-                        <span class="cert-item">Certified Scrum Master (CSM)</span>
-                        <span class="cert-item">AI Product Manager Certification</span>
+                    <div class="cert-item">
+                        <h4>Scrum Master Certificate</h4>
+                    </div>
+                    <div class="cert-item">
+                        <h4>AI Product Manager Certificate</h4>
+                    </div>
+                    <div class="cert-item">
+                        <a href="certificates.html" target="_blank" style="text-decoration: none; color: inherit;">
+                            <i class="fas fa-external-link-alt"></i> View All Learning Certificates
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Interested in AI-assisted development or have a project in mind?</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-method">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p><a href="mailto:robpandeymba@gmail.com"
-                                    style="color: var(--text-secondary); text-decoration: none;">robpandeymba@gmail.com</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p><a href="tel:214-973-6728"
-                                    style="color: var(--text-secondary); text-decoration: none;">214-973-6728</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <p><a href="https://linkedin.com/in/robinpandey" target="_blank"
-                                    style="color: var(--text-secondary); text-decoration: none;">linkedin.com/in/robinpandey</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <p><a href="https://github.com/Apolloat2022" target="_blank"
-                                    style="color: var(--text-secondary); text-decoration: none;">github.com/Apolloat2022</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-blog"></i>
-                        <div>
-                            <h3>Technical Blog</h3>
-                            <p><a href="https://robinpandey.wordpress.com" target="_blank"
-                                    style="color: var(--text-secondary); text-decoration: none;">robinpandey.wordpress.com</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Dallas, Texas | U.S. Citizen<br>Remote Position Available</p>
-                        </div>
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Interested in AI-assisted development or have a project in mind?</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-method">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div>
+                        <h3>Schedule a Meeting</h3>
+                        <p><a href="https://calendly.com/revanaglobal/30min?month=2026-03" target="_blank"
+                                style="color: var(--text-secondary); text-decoration: none; font-weight: bold;">Book a 15-minute call</a>
+                        </p>
                     </div>
                 </div>
+
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:robpandeymba@gmail.com"
+                                style="color: var(--text-secondary); text-decoration: none;">robpandeymba@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:214-973-6728"
+                                style="color: var(--text-secondary); text-decoration: none;">214-973-6728</a></p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://linkedin.com/in/robinpandey" target="_blank"
+                                style="color: var(--text-secondary); text-decoration: none;">linkedin.com/in/robinpandey</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/Apolloat2022" target="_blank"
+                                style="color: var(--text-secondary); text-decoration: none;">github.com/Apolloat2022</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-blog"></i>
+                    <div>
+                        <h3>Technical Blog</h3>
+                        <p><a href="https://robinpandey.wordpress.com" target="_blank"
+                                style="color: var(--text-secondary); text-decoration: none;">robinpandey.wordpress.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Dallas, Texas | U.S. Citizen<br>Remote Position Available</p>
+                    </div>
+                </div>
+            </div>
                 <div class="contact-form">
                     <form id="contactForm" action="https://formspree.io/f/xjknojlq" method="POST">
                         <input type="hidden" name="_subject" value="New Portfolio Message from Robin Pandey's Website">
@@ -1520,7 +1936,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3>Robin Pandey</h3>
-                    <p>AI-Assisted Full Stack Developer, Solution Architect & Senior Product Manager</p>
+                    <p>AI-Assisted Full Stack Builder, Solution Architect & Senior Product Manager</p>
                     <p class="footer-tagline">Transforming concepts into live applications through AI collaboration</p>
                 </div>
                 <div class="footer-links">
