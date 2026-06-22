@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Agentic AI Certificate | Robin Pandey</title>
+    <meta name="description"
+        content="Robin Pandey's Certificate of Completion for Understanding Agentic AI from agent academy.ai — March 2026.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ── Certificate Viewer Page ── */
+        .cert-viewer-page {
+            min-height: 100vh;
+            padding: 120px 0 80px;
+            background: var(--bg-primary, #0a0a0f);
+        }
+
+        .cert-viewer-page .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 40px;
+            font-size: 0.875rem;
+            color: var(--text-muted, #888);
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted, #888);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover { color: var(--accent, #7c3aed); }
+        .breadcrumb .separator { opacity: 0.5; }
+        .breadcrumb .current { color: var(--text-primary, #e2e8f0); }
+
+        /* Hero header */
+        .cert-hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .cert-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(59,130,246,0.15));
+            border: 1px solid rgba(124,58,237,0.3);
+            border-radius: 50px;
+            padding: 6px 18px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #a78bfa;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .cert-hero h1 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, #e2e8f0, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0 0 12px;
+            line-height: 1.2;
+        }
+
+        .cert-hero p {
+            color: var(--text-secondary, #94a3b8);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        /* Image card */
+        .cert-image-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow:
+                0 0 0 1px rgba(124,58,237,0.2),
+                0 40px 80px rgba(0,0,0,0.5),
+                0 0 60px rgba(124,58,237,0.08);
+            margin-bottom: 40px;
+            background: #111118;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .cert-image-wrapper:hover {
+            transform: translateY(-4px);
+            box-shadow:
+                0 0 0 1px rgba(124,58,237,0.35),
+                0 50px 100px rgba(0,0,0,0.6),
+                0 0 80px rgba(124,58,237,0.12);
+        }
+
+        .cert-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Glowing top border accent */
+        .cert-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #7c3aed, #3b82f6, #7c3aed);
+            background-size: 200% 100%;
+            animation: shimmer 3s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Meta info row */
+        .cert-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .cert-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary, #94a3b8);
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .cert-meta-item:hover {
+            border-color: rgba(124,58,237,0.3);
+            background: rgba(124,58,237,0.06);
+        }
+
+        .cert-meta-item i {
+            color: #7c3aed;
+            font-size: 1rem;
+            width: 18px;
+            text-align: center;
+        }
+
+        .cert-meta-item strong {
+            color: var(--text-primary, #e2e8f0);
+            margin-right: 4px;
+        }
+
+        /* Skills tags */
+        .cert-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 48px;
+        }
+
+        .cert-skills .skill-tag {
+            background: rgba(124,58,237,0.12);
+            border: 1px solid rgba(124,58,237,0.25);
+            color: #a78bfa;
+            border-radius: 50px;
+            padding: 6px 16px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            transition: background 0.2s, border-color 0.2s, transform 0.2s;
+        }
+
+        .cert-skills .skill-tag:hover {
+            background: rgba(124,58,237,0.22);
+            border-color: rgba(124,58,237,0.5);
+            transform: translateY(-1px);
+        }
+
+        /* Action buttons */
+        .cert-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .btn-primary-cert {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #7c3aed, #5b21b6);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 14px 28px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+            box-shadow: 0 4px 20px rgba(124,58,237,0.3);
+        }
+
+        .btn-primary-cert:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(124,58,237,0.45);
+            background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        }
+
+        .btn-secondary-cert {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: transparent;
+            color: var(--text-secondary, #94a3b8);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 12px;
+            padding: 14px 28px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            font-family: 'Inter', sans-serif;
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s, color 0.2s, background 0.2s;
+        }
+
+        .btn-secondary-cert:hover {
+            transform: translateY(-2px);
+            border-color: rgba(124,58,237,0.4);
+            color: #a78bfa;
+            background: rgba(124,58,237,0.06);
+        }
+
+        /* Divider */
+        .cert-divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            margin: 0 0 48px;
+        }
+
+        /* Related certs teaser */
+        .cert-related-title {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary, #e2e8f0);
+            margin-bottom: 24px;
+        }
+
+        .cert-related-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #7c3aed;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: gap 0.2s;
+        }
+
+        .cert-related-link:hover { gap: 14px; }
+
+        /* Light mode overrides */
+        body.light-mode .cert-viewer-page {
+            background: var(--bg-primary, #f8fafc);
+        }
+
+        body.light-mode .cert-meta-item {
+            background: rgba(0,0,0,0.03);
+            border-color: rgba(0,0,0,0.08);
+            color: #475569;
+        }
+
+        body.light-mode .cert-meta-item strong { color: #1e293b; }
+
+        body.light-mode .cert-image-wrapper {
+            background: #fff;
+            box-shadow:
+                0 0 0 1px rgba(124,58,237,0.15),
+                0 20px 60px rgba(0,0,0,0.12);
+        }
+
+        body.light-mode .cert-hero h1 {
+            background: linear-gradient(135deg, #1e293b, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.light-mode .btn-secondary-cert {
+            color: #475569;
+            border-color: rgba(0,0,0,0.12);
+        }
+
+        body.light-mode .cert-divider {
+            border-color: rgba(0,0,0,0.07);
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .cert-viewer-page { padding: 100px 0 60px; }
+            .cert-actions { flex-direction: column; align-items: stretch; }
+            .btn-primary-cert, .btn-secondary-cert { justify-content: center; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Robin Pandey</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+
+                <li class="dropdown-item">
+                    <a href="index.html#applications" class="dropdown-trigger">
+                        Live Applications <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#applications" onclick="activateFilter('featured')">Featured &amp; SaaS</a></li>
+                        <li><a href="index.html#applications" onclick="activateFilter('ai')">AI-Powered</a></li>
+                        <li><a href="index.html#applications" onclick="activateFilter('web3')">Web3 &amp; Blockchain</a></li>
+                        <li><a href="index.html#applications" onclick="activateFilter('business')">Business Solutions</a></li>
+                        <li><a href="index.html#applications" onclick="activateFilter('all')">View All Projects</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="index.html#ai-expertise">AI Development</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="https://robinpandey.wordpress.com/" target="_blank">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Certificate Viewer -->
+    <section class="cert-viewer-page">
+        <div class="container">
+
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <a href="certificates.html">Certificates</a>
+                <span class="separator">/</span>
+                <span class="current">Understanding Agentic AI</span>
+            </nav>
+
+            <!-- Hero -->
+            <div class="cert-hero">
+                <div class="cert-badge">
+                    <i class="fas fa-award"></i> Certificate of Completion
+                </div>
+                <h1>Understanding Agentic AI</h1>
+                <p>Issued by agent academy.ai &mdash; March 2026</p>
+            </div>
+
+            <!-- Certificate Image -->
+            <div class="cert-image-wrapper">
+                <img src="assets/certificates/agentic-ai-cert.jpg"
+                    alt="Robin Pandey — Understanding Agentic AI Certificate of Completion from agent academy.ai, March 2026">
+            </div>
+
+            <!-- Meta Info -->
+            <div class="cert-meta">
+                <div class="cert-meta-item">
+                    <i class="fas fa-building"></i>
+                    <span><strong>Issuer:</strong> agent academy.ai</span>
+                </div>
+                <div class="cert-meta-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <span><strong>Completed:</strong> March 2026</span>
+                </div>
+                <div class="cert-meta-item">
+                    <i class="fas fa-fingerprint"></i>
+                    <span><strong>ID:</strong> 69b62704578634845700a4df3</span>
+                </div>
+                <div class="cert-meta-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span><strong>Provided by:</strong> Digital Workforce Services Plc</span>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="cert-skills">
+                <span class="skill-tag">Agentic AI</span>
+                <span class="skill-tag">AI Workflows</span>
+                <span class="skill-tag">Automation</span>
+                <span class="skill-tag">AI Development</span>
+                <span class="skill-tag">LLM Agents</span>
+                <span class="skill-tag">Multi-Agent Systems</span>
+            </div>
+
+            <!-- Actions -->
+            <div class="cert-actions">
+                <a id="verify-cert-btn" href="https://mycourse.app/DAOG3QC4rNo2GDHEd" target="_blank"
+                    rel="noopener noreferrer" class="btn-primary-cert">
+                    <i class="fas fa-external-link-alt"></i> Verify on agent academy.ai
+                </a>
+                <a id="back-to-certs-btn" href="certificates.html" class="btn-secondary-cert">
+                    <i class="fas fa-arrow-left"></i> Back to All Certificates
+                </a>
+            </div>
+
+            <hr class="cert-divider">
+
+            <!-- Related link -->
+            <p class="cert-related-title">Explore more credentials</p>
+            <a href="certificates.html" class="cert-related-link" id="all-certs-link">
+                View all Professional Certificates <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Robin Pandey</h3>
+                    <p>AI-Assisted Full Stack Developer &amp; Solution Architect</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#applications">Projects</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <li><a href="https://robinpandey.wordpress.com/" target="_blank">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/robinpandey" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Apolloat2022" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Robin Pandey. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
