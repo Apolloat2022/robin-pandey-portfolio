@@ -245,7 +245,9 @@
                             trained XGBoost pipeline (0.90 ROC-AUC), and for high-risk customers, kicks off a stateful
                             LangGraph agent that retrieves applicable policy documents (parent-child RAG), drafts a
                             remediation plan via Claude on Amazon Bedrock, runs it through a deterministic compliance
-                            check, and pauses for human compliance-officer sign-off before finalizing.
+                            check, and pauses for human compliance-officer sign-off before finalizing. The same
+                            workflow is also exposed as an MCP server, so any MCP-speaking AI client (Claude Desktop,
+                            Cursor, etc.) can call it directly.
                             <strong>Live and fully functional</strong> on AWS ECS Fargate — real XGBoost scoring, real
                             Postgres persistence, and real Bedrock/Claude agent calls; built as a portfolio
                             demonstration using synthetic loan data, not real customer records.
@@ -255,6 +257,7 @@
                             <span class="tech-tag">XGBoost</span>
                             <span class="tech-tag">LangGraph</span>
                             <span class="tech-tag">Amazon Bedrock (Claude)</span>
+                            <span class="tech-tag">MCP</span>
                             <span class="tech-tag">SQLAlchemy 2.0</span>
                             <span class="tech-tag">Neon Postgres</span>
                             <span class="tech-tag">Docker</span>
@@ -263,6 +266,7 @@
                             <span class="ai-tool">Claude Sonnet 5 (Bedrock)</span>
                             <span class="ai-tool">Agentic Workflows</span>
                             <span class="ai-tool">RAG Retrieval</span>
+                            <span class="ai-tool">MCP Tool Calling</span>
                         </div>
                         <div class="project-features">
                             <span class="feature"><i class="fas fa-check-circle"></i> XGBoost Risk Scoring (0.90 ROC-AUC)</span>
@@ -271,6 +275,7 @@
                             <span class="feature"><i class="fas fa-check-circle"></i> Human-in-the-Loop Approval</span>
                             <span class="feature"><i class="fas fa-check-circle"></i> Automated Compliance Checks</span>
                             <span class="feature"><i class="fas fa-check-circle"></i> Full Audit Trail Logging</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> MCP Server (Claude/Cursor Tools)</span>
                         </div>
                     </div>
                     <div class="project-footer">

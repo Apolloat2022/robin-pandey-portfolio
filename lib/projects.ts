@@ -56,7 +56,7 @@ export const projects: Project[] = [
     slug: "riskguard-ai",
     title: "RiskGuard AI: Enterprise Risk Analytics & Automated Remediation",
     description:
-      "An enterprise risk analytics platform that scores loan customers for default risk with a trained XGBoost pipeline (0.90 ROC-AUC), and for high-risk customers, kicks off a stateful LangGraph agent that retrieves applicable policy documents (parent-child RAG), drafts a remediation plan via Claude on Amazon Bedrock, runs it through a deterministic compliance check, and pauses for human compliance-officer sign-off before finalizing. Live and fully functional on AWS ECS Fargate — real XGBoost scoring, real Postgres persistence, and real Bedrock/Claude agent calls; built as a portfolio demonstration using synthetic loan data, not real customer records.",
+      "An enterprise risk analytics platform that scores loan customers for default risk with a trained XGBoost pipeline (0.90 ROC-AUC), and for high-risk customers, kicks off a stateful LangGraph agent that retrieves applicable policy documents (parent-child RAG), drafts a remediation plan via Claude on Amazon Bedrock, runs it through a deterministic compliance check, and pauses for human compliance-officer sign-off before finalizing. The same workflow is also exposed as an MCP server, so any MCP-speaking AI client (Claude Desktop, Cursor, etc.) can call it directly. Live and fully functional on AWS ECS Fargate — real XGBoost scoring, real Postgres persistence, and real Bedrock/Claude agent calls; built as a portfolio demonstration using synthetic loan data, not real customer records.",
     categories: ["ai-powered", "business", "web-app", "featured"],
     badges: [
       { label: "Featured", variant: "featured" },
@@ -65,8 +65,8 @@ export const projects: Project[] = [
       { label: "AWS Cloud", variant: "info" },
     ],
     featured: true,
-    techTags: ["FastAPI", "XGBoost", "LangGraph", "Amazon Bedrock (Claude)", "SQLAlchemy 2.0", "Neon Postgres", "Docker"],
-    aiTools: ["Claude Sonnet 5 (Bedrock)", "Agentic Workflows", "RAG Retrieval"],
+    techTags: ["FastAPI", "XGBoost", "LangGraph", "Amazon Bedrock (Claude)", "MCP", "SQLAlchemy 2.0", "Neon Postgres", "Docker"],
+    aiTools: ["Claude Sonnet 5 (Bedrock)", "Agentic Workflows", "RAG Retrieval", "MCP Tool Calling"],
     features: [
       "XGBoost Risk Scoring (0.90 ROC-AUC)",
       "Stateful LangGraph Agent",
@@ -74,6 +74,7 @@ export const projects: Project[] = [
       "Human-in-the-Loop Approval",
       "Automated Compliance Checks",
       "Full Audit Trail Logging",
+      "MCP Server (Claude/Cursor Tools)",
     ],
     link: { label: "Live API (Swagger)", href: "http://riskguard-alb-143265901.us-east-1.elb.amazonaws.com/docs" },
     deploymentBadge: "AWS ECS Fargate",
