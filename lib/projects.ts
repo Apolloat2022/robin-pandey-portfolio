@@ -27,6 +27,59 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "stablecoin-treasury-orchestrator",
+    title: "Stablecoin Treasury Orchestrator: Settlement & Compliance Engine",
+    description:
+      "A fiat ⇄ stablecoin settlement orchestrator with a SHA-256 hash-chained, tamper-evident audit trail and a maker-checker compliance workflow — architected to be \"exam-ready\" for bank-style SOX/AML regulatory review. A mock AML agent scores every transaction against jurisdiction, size, velocity, and structuring heuristics, routing anything risky into a reviewer queue before it can settle. Demo/portfolio project only: no real bank, blockchain, or funds are involved — every transaction, entity, and AML rule is simulated to demonstrate the architecture and controls, not to move real money.",
+    categories: ["web3", "business", "web-app", "featured"],
+    badges: [
+      { label: "Featured", variant: "featured" },
+      { label: "Web3/Stablecoin", variant: "web3" },
+      { label: "Compliance/AML", variant: "business" },
+      { label: "Demo Only", variant: "info" },
+    ],
+    featured: true,
+    techTags: ["Next.js 15", "TypeScript", "Tailwind CSS v4", "Upstash Redis", "Docker", "SHA-256 Hash Chain"],
+    aiTools: ["Claude Sonnet 5"],
+    features: [
+      "Hash-Chained Audit Trail",
+      "Maker-Checker Exception Queue",
+      "Mock AML Risk Scoring",
+      "CSV / PDF Auditor Export",
+      "Dual Storage Backends (File + Redis)",
+      "Real-Time Settlement State Machine",
+    ],
+    link: { label: "Live Demo", href: "https://stablecoin-orchestrator-alpha.vercel.app" },
+    deploymentBadge: "Demo · Vercel + Redis",
+  },
+  {
+    slug: "riskguard-ai",
+    title: "RiskGuard AI: Enterprise Risk Analytics & Automated Remediation",
+    description:
+      "An enterprise risk analytics platform that scores loan customers for default risk with a trained XGBoost pipeline (0.90 ROC-AUC), and for high-risk customers, kicks off a stateful LangGraph agent that retrieves applicable policy documents (parent-child RAG), drafts a remediation plan via Claude on Amazon Bedrock, runs it through a deterministic compliance check, and pauses for human compliance-officer sign-off before finalizing. Live and fully functional on AWS ECS Fargate — real XGBoost scoring, real Postgres persistence, and real Bedrock/Claude agent calls; built as a portfolio demonstration using synthetic loan data, not real customer records.",
+    categories: ["ai-powered", "business", "web-app", "featured"],
+    badges: [
+      { label: "Featured", variant: "featured" },
+      { label: "AI-Powered", variant: "ai" },
+      { label: "Fintech", variant: "business" },
+      { label: "AWS Cloud", variant: "info" },
+    ],
+    featured: true,
+    techTags: ["FastAPI", "XGBoost", "LangGraph", "Amazon Bedrock (Claude)", "SQLAlchemy 2.0", "Neon Postgres", "Docker"],
+    aiTools: ["Claude Sonnet 5 (Bedrock)", "Agentic Workflows", "RAG Retrieval"],
+    features: [
+      "XGBoost Risk Scoring (0.90 ROC-AUC)",
+      "Stateful LangGraph Agent",
+      "Parent-Child RAG Retrieval",
+      "Human-in-the-Loop Approval",
+      "Automated Compliance Checks",
+      "Full Audit Trail Logging",
+    ],
+    link: { label: "Live API (Swagger)", href: "http://riskguard-alb-143265901.us-east-1.elb.amazonaws.com/docs" },
+    deploymentBadge: "AWS ECS Fargate",
+    impactRating: { stars: 5, label: "Risk & Compliance Impact" },
+  },
+  {
     slug: "mastering-ai-agentic-loops",
     title: "Mastering AI Agentic Loops: Engineering-First Course Platform",
     description:
@@ -848,59 +901,6 @@ export const projects: Project[] = [
     link: { label: "Local CLI Tool", href: "#" },
     deploymentBadge: "Local Python CLI",
     impactRating: { stars: 4, label: "Research Utility" },
-  },
-  {
-    slug: "stablecoin-treasury-orchestrator",
-    title: "Stablecoin Treasury Orchestrator: Settlement & Compliance Engine",
-    description:
-      "A fiat ⇄ stablecoin settlement orchestrator with a SHA-256 hash-chained, tamper-evident audit trail and a maker-checker compliance workflow — architected to be \"exam-ready\" for bank-style SOX/AML regulatory review. A mock AML agent scores every transaction against jurisdiction, size, velocity, and structuring heuristics, routing anything risky into a reviewer queue before it can settle. Demo/portfolio project only: no real bank, blockchain, or funds are involved — every transaction, entity, and AML rule is simulated to demonstrate the architecture and controls, not to move real money.",
-    categories: ["web3", "business", "web-app", "featured"],
-    badges: [
-      { label: "Featured", variant: "featured" },
-      { label: "Web3/Stablecoin", variant: "web3" },
-      { label: "Compliance/AML", variant: "business" },
-      { label: "Demo Only", variant: "info" },
-    ],
-    featured: true,
-    techTags: ["Next.js 15", "TypeScript", "Tailwind CSS v4", "Upstash Redis", "Docker", "SHA-256 Hash Chain"],
-    aiTools: ["Claude Sonnet 5"],
-    features: [
-      "Hash-Chained Audit Trail",
-      "Maker-Checker Exception Queue",
-      "Mock AML Risk Scoring",
-      "CSV / PDF Auditor Export",
-      "Dual Storage Backends (File + Redis)",
-      "Real-Time Settlement State Machine",
-    ],
-    link: { label: "Live Demo", href: "https://stablecoin-orchestrator-alpha.vercel.app" },
-    deploymentBadge: "Demo · Vercel + Redis",
-  },
-  {
-    slug: "riskguard-ai",
-    title: "RiskGuard AI: Enterprise Risk Analytics & Automated Remediation",
-    description:
-      "An enterprise risk analytics platform that scores loan customers for default risk with a trained XGBoost pipeline (0.90 ROC-AUC), and for high-risk customers, kicks off a stateful LangGraph agent that retrieves applicable policy documents (parent-child RAG), drafts a remediation plan via Claude on Amazon Bedrock, runs it through a deterministic compliance check, and pauses for human compliance-officer sign-off before finalizing. Live and fully functional on AWS ECS Fargate — real XGBoost scoring, real Postgres persistence, and real Bedrock/Claude agent calls; built as a portfolio demonstration using synthetic loan data, not real customer records.",
-    categories: ["ai-powered", "business", "web-app", "featured"],
-    badges: [
-      { label: "Featured", variant: "featured" },
-      { label: "AI-Powered", variant: "ai" },
-      { label: "Fintech", variant: "business" },
-      { label: "AWS Cloud", variant: "info" },
-    ],
-    featured: true,
-    techTags: ["FastAPI", "XGBoost", "LangGraph", "Amazon Bedrock (Claude)", "SQLAlchemy 2.0", "Neon Postgres", "Docker"],
-    aiTools: ["Claude Sonnet 5 (Bedrock)", "Agentic Workflows", "RAG Retrieval"],
-    features: [
-      "XGBoost Risk Scoring (0.90 ROC-AUC)",
-      "Stateful LangGraph Agent",
-      "Parent-Child RAG Retrieval",
-      "Human-in-the-Loop Approval",
-      "Automated Compliance Checks",
-      "Full Audit Trail Logging",
-    ],
-    link: { label: "Live API (Swagger)", href: "http://riskguard-alb-143265901.us-east-1.elb.amazonaws.com/docs" },
-    deploymentBadge: "AWS ECS Fargate",
-    impactRating: { stars: 5, label: "Risk & Compliance Impact" },
   },
 ];
 

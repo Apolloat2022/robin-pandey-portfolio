@@ -180,6 +180,117 @@
 
             <!-- Projects Grid -->
             <div class="projects-grid">
+                <!-- Stablecoin Treasury Orchestrator Project Card -->
+                <div class="project-card" data-category="web3 business web-app featured" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge web3"><i class="fas fa-link"></i> Web3/Stablecoin</span>
+                        <span class="project-badge business"><i class="fas fa-shield-alt"></i> Compliance/AML</span>
+                        <span class="project-badge web-app"><i class="fas fa-laptop-code"></i> Web App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Stablecoin Treasury Orchestrator: Settlement &amp; Compliance Engine</h3>
+                        <p class="project-description">
+                            A fiat &#8646; stablecoin settlement orchestrator with a SHA-256 hash-chained,
+                            tamper-evident audit trail and a maker-checker compliance workflow — architected to be
+                            "exam-ready" for bank-style SOX/AML regulatory review. A mock AML agent scores every
+                            transaction against jurisdiction, size, velocity, and structuring heuristics, routing
+                            anything risky into a reviewer queue before it can settle.
+                            <strong>Demo/portfolio project only:</strong> no real bank, blockchain, or funds are
+                            involved — every transaction, entity, and AML rule is simulated to demonstrate the
+                            architecture and controls, not to move real money.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js 15</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS v4</span>
+                            <span class="tech-tag">Upstash Redis</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">SHA-256 Hash Chain</span>
+                        </div>
+                        <div class="ai-tools" style="margin-top: 10px;">
+                            <span class="ai-tool">Claude Sonnet 5</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Hash-Chained Audit Trail</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Maker-Checker Exception Queue</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Mock AML Risk Scoring</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> CSV / PDF Auditor Export</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Dual Storage Backends (File + Redis)</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Real-Time Settlement State Machine</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://stablecoin-orchestrator-alpha.vercel.app" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-globe"></i> Demo &middot; Vercel + Redis
+                        </span>
+                    </div>
+                </div>
+
+                <!-- RiskGuard AI Project Card -->
+                <div class="project-card" data-category="ai-powered business web-app featured" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
+                        <span class="project-badge business"><i class="fas fa-chart-line"></i> Fintech</span>
+                        <span class="project-badge cloud"><i class="fab fa-aws"></i> AWS Cloud</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">RiskGuard AI: Enterprise Risk Analytics &amp; Automated Remediation</h3>
+                        <p class="project-description">
+                            An enterprise risk analytics platform that scores loan customers for default risk with a
+                            trained XGBoost pipeline (0.90 ROC-AUC), and for high-risk customers, kicks off a stateful
+                            LangGraph agent that retrieves applicable policy documents (parent-child RAG), drafts a
+                            remediation plan via Claude on Amazon Bedrock, runs it through a deterministic compliance
+                            check, and pauses for human compliance-officer sign-off before finalizing.
+                            <strong>Live and fully functional</strong> on AWS ECS Fargate — real XGBoost scoring, real
+                            Postgres persistence, and real Bedrock/Claude agent calls; built as a portfolio
+                            demonstration using synthetic loan data, not real customer records.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">XGBoost</span>
+                            <span class="tech-tag">LangGraph</span>
+                            <span class="tech-tag">Amazon Bedrock (Claude)</span>
+                            <span class="tech-tag">SQLAlchemy 2.0</span>
+                            <span class="tech-tag">Neon Postgres</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="ai-tools" style="margin-top: 10px;">
+                            <span class="ai-tool">Claude Sonnet 5 (Bedrock)</span>
+                            <span class="ai-tool">Agentic Workflows</span>
+                            <span class="ai-tool">RAG Retrieval</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> XGBoost Risk Scoring (0.90 ROC-AUC)</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Stateful LangGraph Agent</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Parent-Child RAG Retrieval</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Human-in-the-Loop Approval</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Automated Compliance Checks</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Full Audit Trail Logging</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="http://riskguard-alb-143265901.us-east-1.elb.amazonaws.com/docs" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Live API (Swagger)
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fab fa-aws"></i> AWS ECS Fargate
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Risk &amp; Compliance Impact</span>
+                        </span>
+                    </div>
+                </div>
+
                 <!-- Mastering AI Agentic Loops Project Card -->
                 <div class="project-card" data-category="web-app education ai-powered featured" data-featured="true">
                     <div class="project-header">
@@ -1904,117 +2015,6 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <span class="impact-label">Research Utility</span>
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Stablecoin Treasury Orchestrator Project Card -->
-                <div class="project-card" data-category="web3 business web-app featured" data-featured="true">
-                    <div class="project-header">
-                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
-                        <span class="project-badge web3"><i class="fas fa-link"></i> Web3/Stablecoin</span>
-                        <span class="project-badge business"><i class="fas fa-shield-alt"></i> Compliance/AML</span>
-                        <span class="project-badge web-app"><i class="fas fa-laptop-code"></i> Web App</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Stablecoin Treasury Orchestrator: Settlement &amp; Compliance Engine</h3>
-                        <p class="project-description">
-                            A fiat &#8646; stablecoin settlement orchestrator with a SHA-256 hash-chained,
-                            tamper-evident audit trail and a maker-checker compliance workflow — architected to be
-                            "exam-ready" for bank-style SOX/AML regulatory review. A mock AML agent scores every
-                            transaction against jurisdiction, size, velocity, and structuring heuristics, routing
-                            anything risky into a reviewer queue before it can settle.
-                            <strong>Demo/portfolio project only:</strong> no real bank, blockchain, or funds are
-                            involved — every transaction, entity, and AML rule is simulated to demonstrate the
-                            architecture and controls, not to move real money.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Next.js 15</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">Tailwind CSS v4</span>
-                            <span class="tech-tag">Upstash Redis</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">SHA-256 Hash Chain</span>
-                        </div>
-                        <div class="ai-tools" style="margin-top: 10px;">
-                            <span class="ai-tool">Claude Sonnet 5</span>
-                        </div>
-                        <div class="project-features">
-                            <span class="feature"><i class="fas fa-check-circle"></i> Hash-Chained Audit Trail</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Maker-Checker Exception Queue</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Mock AML Risk Scoring</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> CSV / PDF Auditor Export</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Dual Storage Backends (File + Redis)</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Real-Time Settlement State Machine</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="https://stablecoin-orchestrator-alpha.vercel.app" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live Demo
-                        </a>
-                        <span class="deployment-badge">
-                            <i class="fas fa-globe"></i> Demo &middot; Vercel + Redis
-                        </span>
-                    </div>
-                </div>
-
-                <!-- RiskGuard AI Project Card -->
-                <div class="project-card" data-category="ai-powered business web-app featured" data-featured="true">
-                    <div class="project-header">
-                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
-                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
-                        <span class="project-badge business"><i class="fas fa-chart-line"></i> Fintech</span>
-                        <span class="project-badge cloud"><i class="fab fa-aws"></i> AWS Cloud</span>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">RiskGuard AI: Enterprise Risk Analytics &amp; Automated Remediation</h3>
-                        <p class="project-description">
-                            An enterprise risk analytics platform that scores loan customers for default risk with a
-                            trained XGBoost pipeline (0.90 ROC-AUC), and for high-risk customers, kicks off a stateful
-                            LangGraph agent that retrieves applicable policy documents (parent-child RAG), drafts a
-                            remediation plan via Claude on Amazon Bedrock, runs it through a deterministic compliance
-                            check, and pauses for human compliance-officer sign-off before finalizing.
-                            <strong>Live and fully functional</strong> on AWS ECS Fargate — real XGBoost scoring, real
-                            Postgres persistence, and real Bedrock/Claude agent calls; built as a portfolio
-                            demonstration using synthetic loan data, not real customer records.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">XGBoost</span>
-                            <span class="tech-tag">LangGraph</span>
-                            <span class="tech-tag">Amazon Bedrock (Claude)</span>
-                            <span class="tech-tag">SQLAlchemy 2.0</span>
-                            <span class="tech-tag">Neon Postgres</span>
-                            <span class="tech-tag">Docker</span>
-                        </div>
-                        <div class="ai-tools" style="margin-top: 10px;">
-                            <span class="ai-tool">Claude Sonnet 5 (Bedrock)</span>
-                            <span class="ai-tool">Agentic Workflows</span>
-                            <span class="ai-tool">RAG Retrieval</span>
-                        </div>
-                        <div class="project-features">
-                            <span class="feature"><i class="fas fa-check-circle"></i> XGBoost Risk Scoring (0.90 ROC-AUC)</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Stateful LangGraph Agent</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Parent-Child RAG Retrieval</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Human-in-the-Loop Approval</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Automated Compliance Checks</span>
-                            <span class="feature"><i class="fas fa-check-circle"></i> Full Audit Trail Logging</span>
-                        </div>
-                    </div>
-                    <div class="project-footer">
-                        <a href="http://riskguard-alb-143265901.us-east-1.elb.amazonaws.com/docs" target="_blank" class="project-link live">
-                            <i class="fas fa-external-link-alt"></i> Live API (Swagger)
-                        </a>
-                        <span class="deployment-badge">
-                            <i class="fab fa-aws"></i> AWS ECS Fargate
-                        </span>
-                        <span class="impact-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span class="impact-label">Risk &amp; Compliance Impact</span>
                         </span>
                     </div>
                 </div>
