@@ -180,6 +180,138 @@
 
             <!-- Projects Grid -->
             <div class="projects-grid">
+                <!-- Deep Agent AI Project Card -->
+                <div class="project-card" data-category="ai-powered business web-app featured" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
+                        <span class="project-badge business"><i class="fas fa-sitemap"></i> Agentic Orchestration</span>
+                        <span class="project-badge cloud"><i class="fab fa-aws"></i> AWS Bedrock</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Deep Agent AI: Enterprise Human-in-the-Loop Orchestrator</h3>
+                        <p class="project-description">
+                            An enterprise operations "deep agent" built on the supervisor-style deepagents harness
+                            (LangGraph runtime) and served as a streaming FastAPI service. Given a natural-language
+                            request, it plans with todo tools, delegates focused data-gathering to a dedicated
+                            research subagent so raw records never flood the orchestrator's context, drafts analysis
+                            in a sandboxed filesystem workspace, and only submits a change request to a downstream
+                            enterprise system after a human approves, edits, or rejects it at a LangGraph interrupt.
+                            Models are served through Amazon Bedrock with IAM-based auth via the ECS task role, and
+                            the agent is grounded against fabrication — it must fetch real records rather than invent
+                            them, degrading gracefully to a clearly labeled "not configured" state when no backend is
+                            wired in.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">LangGraph</span>
+                            <span class="tech-tag">deepagents</span>
+                            <span class="tech-tag">Amazon Bedrock (Claude)</span>
+                            <span class="tech-tag">Server-Sent Events</span>
+                            <span class="tech-tag">SQLite / Postgres</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">ECS Fargate</span>
+                        </div>
+                        <div class="ai-tools" style="margin-top: 10px;">
+                            <span class="ai-tool">Claude Opus 4.8 (Bedrock)</span>
+                            <span class="ai-tool">Claude Sonnet 5 (Bedrock)</span>
+                            <span class="ai-tool">Agentic Workflows</span>
+                            <span class="ai-tool">Human-in-the-Loop Approval</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Supervisor-Style Deep Agent</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Research Subagent Delegation</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Human-in-the-Loop Approval Gates</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> SSE Streaming API</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Sandboxed Filesystem Workspace</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Grounded Tool Calling (No Fabrication)</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> ECS Fargate Deployment</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#contact" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Request Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-box"></i> Docker &middot; ECS-Ready
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Enterprise Agent Impact</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Obsvagent Observability Layer Project Card -->
+                <div class="project-card" data-category="ai-powered business featured" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
+                        <span class="project-badge business"><i class="fas fa-eye"></i> Observability</span>
+                        <span class="project-badge cloud"><i class="fas fa-satellite-dish"></i> OpenTelemetry</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Obsvagent: Shared Observability, RAG-Checker &amp; Compliance-Audit Layer</h3>
+                        <p class="project-description">
+                            A single installable Python package that centralizes telemetry, RAG citation-checking,
+                            and compliance auditing across a multi-repo AI ecosystem (RiskGuard AI, Deep Agent AI,
+                            Stablecoin Treasury Orchestrator) instead of each service re-implementing it. Telemetry is
+                            captured at exactly three seams — the FastAPI edge, a wrapped multi-LLM gateway
+                            (Claude/Gemini/DeepSeek), and LangGraph node transitions — as OpenTelemetry spans with
+                            GenAI semantic conventions, keyed by time-sortable ULID trace IDs and merged into graph
+                            state through a dedicated reducer. Expensive work (citation verification, drift
+                            detection, hash-chaining, alert evaluation) runs off the hot path in an async Checker
+                            service, following a fail-open-for-telemetry, fail-closed-for-compliance design so a
+                            broken observability layer never breaks a user request but a broken audit trail always
+                            halts one.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenTelemetry</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">LangGraph</span>
+                            <span class="tech-tag">Neon Postgres</span>
+                            <span class="tech-tag">ULID</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="ai-tools" style="margin-top: 10px;">
+                            <span class="ai-tool">Claude</span>
+                            <span class="ai-tool">Gemini</span>
+                            <span class="ai-tool">DeepSeek</span>
+                            <span class="ai-tool">RAG Citation Checking</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> OTel-Native Telemetry Schema</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> ULID Time-Sortable Trace IDs</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> LangGraph Telemetry Reducer</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> RAG Citation Checker</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Hash-Chained Audit Trail</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Alert Taxonomy &amp; Thresholds</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Shared Cross-Repo Package</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#contact" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Request Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-box"></i> Python Package &middot; Contracts Frozen
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Reliability Engineering Impact</span>
+                        </span>
+                    </div>
+                </div>
+
                 <!-- Stablecoin Treasury Orchestrator Project Card -->
                 <div class="project-card" data-category="web3 business web-app featured" data-featured="true">
                     <div class="project-header">
