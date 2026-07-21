@@ -27,6 +27,32 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "mirror-the-audiobook",
+    title: "Mirror: The Audiobook — Neural Text-to-Speech Production",
+    description:
+      "A professional-grade, commercially-distributed audiobook production of my published novel, Mirror. Combines Amazon Polly's Neural Text-to-Speech engine with hand-tuned SSML markup — controlling pacing, emphasis, and pauses — to produce natural, lifelike narration suitable for commercial release. Rendered audio is processed and stored through a Python and AWS S3 pipeline, then published to the Google Play Store audiobook catalog.",
+    categories: ["ai-powered", "business", "featured"],
+    badges: [
+      { label: "Featured", variant: "featured" },
+      { label: "AI-Powered", variant: "ai" },
+      { label: "Audiobook", variant: "business" },
+      { label: "AWS Polly", variant: "info" },
+    ],
+    featured: true,
+    techTags: ["Amazon Polly (Neural Engine)", "SSML", "Python", "AWS S3", "Google Play Console"],
+    aiTools: ["Amazon Polly Neural TTS"],
+    features: [
+      "Neural Text-to-Speech Narration",
+      "Custom SSML Prosody Control",
+      "Commercial-Grade Audio Mastering",
+      "S3-Backed Rendering Pipeline",
+      "Google Play Store Distribution",
+    ],
+    link: { label: "Listen on Google Play", href: "https://play.google.com/store/audiobooks/details/Robin_Pandey_Mirror?id=AQAAAEAq1luWYM" },
+    deploymentBadge: "AWS Polly Neural · Live on Google Play",
+    impactRating: { stars: 5, label: "Creative & Commercial Impact" },
+  },
+  {
     slug: "deep-agent-ai",
     title: "Deep Agent AI: Enterprise Human-in-the-Loop Orchestrator",
     description:
