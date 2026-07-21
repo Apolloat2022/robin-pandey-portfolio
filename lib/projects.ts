@@ -27,6 +27,85 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "archiveagent",
+    title: "ArchiveAgent: Agentic Data Archiving & Classification for .NET",
+    description:
+      "Agentic data archiving and classification for .NET, powered by Claude. For each business record, an LLM classifies it into a data category (PII / Financial / Operational / Transient) and proposes a retention action as strict JSON — but a deterministic C# rules engine independently verifies and executes the action against SQL Server via Entity Framework Core. The model proposes, the rules dispose: PII is never auto-archived, nothing under a minimum age is archived, and every decision is logged with reason, confidence, and token cost, with low-confidence calls escalated to a human review queue. Ships with an offline xUnit test suite (SQLite in-memory plus a fake LLM client, no API key or cost) and GitHub Actions CI on every push.",
+    categories: ["ai-powered", "business", "featured"],
+    badges: [
+      { label: "Featured", variant: "featured" },
+      { label: "AI-Powered", variant: "ai" },
+      { label: "Compliance/Governance", variant: "business" },
+      { label: ".NET / C#", variant: "info" },
+    ],
+    featured: true,
+    techTags: ["C# 12", ".NET 8", "ASP.NET Core", "Entity Framework Core 8", "SQL Server", "Anthropic Claude", "xUnit", "GitHub Actions"],
+    aiTools: ["Claude", "Structured JSON Classification"],
+    features: [
+      "Agentic Classify-Decide-Verify-Act Loop",
+      "Deterministic Safety Verification Gate",
+      "Structured, Validated LLM Output",
+      "Full Audit Trail",
+      "Human Review Escalation Queue",
+      "Offline Test Suite (No API Cost)",
+    ],
+    link: { label: "View Source (GitHub)", href: "https://github.com/Apolloat2022/ArchiveAgent" },
+    deploymentBadge: "ASP.NET Core · CI/CD",
+    impactRating: { stars: 5, label: "Governance & Compliance Impact" },
+  },
+  {
+    slug: "apollo-messenger-outreach-dispatcher",
+    title: "Apollo Messenger: Autonomous Sales Outreach Dispatcher",
+    description:
+      "An always-on Python dispatcher that turns an approved-leads queue into sent outreach with zero manual sending. It polls a shared staging folder for leads marked \"approved,\" drives an already-authenticated Chrome session via Playwright to open each contact's LinkedIn profile and send a personalized DM with human-paced typing, then follows up over SMTP email and marks the lead \"sent\" (or \"failed\" with a logged error) before moving to the next one. Built as the natural companion to Open Claw — Open Claw finds and qualifies leads, Apollo Messenger closes the loop by reaching out.",
+    categories: ["business", "productivity", "featured"],
+    badges: [
+      { label: "Featured", variant: "featured" },
+      { label: "Sales Automation", variant: "business" },
+      { label: "Browser Automation", variant: "web-app" },
+      { label: "Python", variant: "info" },
+    ],
+    featured: true,
+    techTags: ["Python", "Playwright", "Chrome DevTools Protocol", "SMTP", "python-dotenv"],
+    features: [
+      "Automated LinkedIn DM Dispatch",
+      "SMTP Email Follow-Up",
+      "Human-Paced Typing Simulation",
+      "Shared Staging Folder Polling",
+      "Status Lifecycle Tracking (Approved → Sent/Failed)",
+      "Full Dispatch Logging",
+    ],
+    link: { label: "Request Demo", href: "#contact" },
+    deploymentBadge: "Local Python Bot",
+    impactRating: { stars: 4, label: "Sales & GTM Impact" },
+  },
+  {
+    slug: "apps-command-center",
+    title: "APPS Command Center: Multi-Project DevOps Dashboard",
+    description:
+      "A zero-dependency, local-first dashboard for tracking every project across a multi-repo portfolio at a glance — stage, git health, live/dev endpoint status, and go-to-market progress in one place. Per-app cards show a stage badge, live health checks for prod and dev URLs, git status (branch, uncommitted files, last commit, a 12-week commit sparkline), and two progress meters: task completion and an 8-item marketing/launch checklist. A detail drawer lets you change stage, manage tasks, and keep notes, saving instantly to a per-machine state file. Portable across machines via a shared drive, with per-hostname app registries so each PC tracks its own local project folder without colliding with others.",
+    categories: ["productivity", "business", "featured"],
+    badges: [
+      { label: "Featured", variant: "featured" },
+      { label: "Productivity", variant: "productivity" },
+      { label: "DevOps Tooling", variant: "business" },
+      { label: "Zero-Dependency", variant: "info" },
+    ],
+    featured: true,
+    techTags: ["Node.js (Built-ins Only)", "Vanilla JS", "Git CLI", "Local JSON State"],
+    features: [
+      "Per-App Stage & Health Tracking",
+      "Live Git Status & Commit Sparkline",
+      "Progress & Marketing Checklists",
+      "Multi-Machine Shared-Drive Support",
+      "Zero npm Dependencies",
+      "Local-Only (127.0.0.1) Binding",
+    ],
+    link: { label: "Request Demo", href: "#contact" },
+    deploymentBadge: "Local Node.js · Zero Deps",
+    impactRating: { stars: 4, label: "Internal Tooling Impact" },
+  },
+  {
     slug: "mirror-the-audiobook",
     title: "Mirror: The Audiobook — Neural Text-to-Speech Production",
     description:

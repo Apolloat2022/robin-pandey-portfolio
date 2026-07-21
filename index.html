@@ -180,6 +180,173 @@
 
             <!-- Projects Grid -->
             <div class="projects-grid">
+                <!-- ArchiveAgent Project Card -->
+                <div class="project-card" data-category="ai-powered business featured" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
+                        <span class="project-badge business"><i class="fas fa-balance-scale"></i> Compliance/Governance</span>
+                        <span class="project-badge tech"><i class="fas fa-code"></i> .NET / C#</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ArchiveAgent: Agentic Data Archiving &amp; Classification for .NET</h3>
+                        <p class="project-description">
+                            Agentic data archiving and classification for .NET, powered by Claude. For each business
+                            record, an LLM classifies it into a data category (PII / Financial / Operational /
+                            Transient) and proposes a retention action as strict JSON — but a deterministic C# rules
+                            engine independently verifies and executes the action against SQL Server via Entity
+                            Framework Core. The model proposes, the rules dispose: PII is never auto-archived,
+                            nothing under a minimum age is archived, and every decision is logged with reason,
+                            confidence, and token cost, with low-confidence calls escalated to a human review queue.
+                            Ships with an offline xUnit test suite (SQLite in-memory plus a fake LLM client, no API
+                            key or cost) and GitHub Actions CI on every push.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C# 12</span>
+                            <span class="tech-tag">.NET 8</span>
+                            <span class="tech-tag">ASP.NET Core</span>
+                            <span class="tech-tag">Entity Framework Core 8</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Anthropic Claude</span>
+                            <span class="tech-tag">xUnit</span>
+                            <span class="tech-tag">GitHub Actions</span>
+                        </div>
+                        <div class="ai-tools" style="margin-top: 10px;">
+                            <span class="ai-tool">Claude</span>
+                            <span class="ai-tool">Structured JSON Classification</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Agentic Classify-Decide-Verify-Act Loop</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Deterministic Safety Verification Gate</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Structured, Validated LLM Output</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Full Audit Trail</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Human Review Escalation Queue</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Offline Test Suite (No API Cost)</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Apolloat2022/ArchiveAgent" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> View Source (GitHub)
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-code-branch"></i> ASP.NET Core &middot; CI/CD
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Governance &amp; Compliance Impact</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Apollo Messenger Project Card -->
+                <div class="project-card" data-category="business productivity featured" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge business"><i class="fas fa-bullseye"></i> Sales Automation</span>
+                        <span class="project-badge web-app"><i class="fas fa-robot"></i> Browser Automation</span>
+                        <span class="project-badge tech"><i class="fab fa-python"></i> Python</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Apollo Messenger: Autonomous Sales Outreach Dispatcher</h3>
+                        <p class="project-description">
+                            An always-on Python dispatcher that turns an approved-leads queue into sent outreach with
+                            zero manual sending. It polls a shared staging folder for leads marked "approved," drives
+                            an already-authenticated Chrome session via Playwright to open each contact's LinkedIn
+                            profile and send a personalized DM with human-paced typing, then follows up over SMTP
+                            email and marks the lead "sent" (or "failed" with a logged error) before moving to the
+                            next one. Built as the natural companion to Open Claw — Open Claw finds and qualifies
+                            leads, Apollo Messenger closes the loop by reaching out.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Playwright</span>
+                            <span class="tech-tag">Chrome DevTools Protocol</span>
+                            <span class="tech-tag">SMTP</span>
+                            <span class="tech-tag">python-dotenv</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Automated LinkedIn DM Dispatch</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> SMTP Email Follow-Up</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Human-Paced Typing Simulation</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Shared Staging Folder Polling</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Status Lifecycle Tracking (Approved &rarr; Sent/Failed)</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Full Dispatch Logging</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#contact" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Request Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-desktop"></i> Local Python Bot
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Sales &amp; GTM Impact</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- APPS Command Center Project Card -->
+                <div class="project-card" data-category="productivity business featured" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge productivity"><i class="fas fa-tachometer-alt"></i> Productivity</span>
+                        <span class="project-badge business"><i class="fas fa-tools"></i> DevOps Tooling</span>
+                        <span class="project-badge tech"><i class="fab fa-node-js"></i> Zero-Dependency</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">APPS Command Center: Multi-Project DevOps Dashboard</h3>
+                        <p class="project-description">
+                            A zero-dependency, local-first dashboard for tracking every project across a multi-repo
+                            portfolio at a glance — stage, git health, live/dev endpoint status, and go-to-market
+                            progress in one place. Per-app cards show a stage badge, live health checks for prod and
+                            dev URLs, git status (branch, uncommitted files, last commit, a 12-week commit sparkline),
+                            and two progress meters: task completion and an 8-item marketing/launch checklist. A
+                            detail drawer lets you change stage, manage tasks, and keep notes, saving instantly to a
+                            per-machine state file. Portable across machines via a shared drive, with per-hostname
+                            app registries so each PC tracks its own local project folder without colliding with
+                            others.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js (Built-ins Only)</span>
+                            <span class="tech-tag">Vanilla JS</span>
+                            <span class="tech-tag">Git CLI</span>
+                            <span class="tech-tag">Local JSON State</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Per-App Stage &amp; Health Tracking</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Live Git Status &amp; Commit Sparkline</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Progress &amp; Marketing Checklists</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Multi-Machine Shared-Drive Support</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Zero npm Dependencies</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Local-Only (127.0.0.1) Binding</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#contact" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Request Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-desktop"></i> Local Node.js &middot; Zero Deps
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Internal Tooling Impact</span>
+                        </span>
+                    </div>
+                </div>
+
                 <!-- Mirror: The Audiobook Project Card -->
                 <div class="project-card" data-category="ai-powered business featured" data-featured="true">
                     <div class="project-header">
