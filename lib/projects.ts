@@ -27,6 +27,62 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "deep-agent-ai",
+    title: "Deep Agent AI: Enterprise Human-in-the-Loop Orchestrator",
+    description:
+      "An enterprise operations \"deep agent\" built on the supervisor-style deepagents harness (LangGraph runtime) and served as a streaming FastAPI service. Given a natural-language request, it plans with todo tools, delegates focused data-gathering to a dedicated research subagent so raw records never flood the orchestrator's context, drafts analysis in a sandboxed filesystem workspace, and only submits a change request to a downstream enterprise system after a human approves, edits, or rejects it at a LangGraph interrupt. Models are served through Amazon Bedrock with IAM-based auth via the ECS task role, and the agent is grounded against fabrication — it must fetch real records rather than invent them, degrading gracefully to a clearly labeled \"not configured\" state when no backend is wired in.",
+    categories: ["ai-powered", "business", "web-app", "featured"],
+    badges: [
+      { label: "Featured", variant: "featured" },
+      { label: "AI-Powered", variant: "ai" },
+      { label: "Agentic Orchestration", variant: "business" },
+      { label: "AWS Bedrock", variant: "info" },
+    ],
+    featured: true,
+    techTags: ["FastAPI", "LangGraph", "deepagents", "Amazon Bedrock (Claude)", "Server-Sent Events", "SQLite / Postgres", "Docker", "ECS Fargate"],
+    aiTools: ["Claude Opus 4.8 (Bedrock)", "Claude Sonnet 5 (Bedrock)", "Agentic Workflows", "Human-in-the-Loop Approval"],
+    features: [
+      "Supervisor-Style Deep Agent",
+      "Research Subagent Delegation",
+      "Human-in-the-Loop Approval Gates",
+      "SSE Streaming API",
+      "Sandboxed Filesystem Workspace",
+      "Grounded Tool Calling (No Fabrication)",
+      "ECS Fargate Deployment",
+    ],
+    link: { label: "Request Demo", href: "#contact" },
+    deploymentBadge: "Docker · ECS-Ready",
+    impactRating: { stars: 5, label: "Enterprise Agent Impact" },
+  },
+  {
+    slug: "obsvagent-observability-layer",
+    title: "Obsvagent: Shared Observability, RAG-Checker & Compliance-Audit Layer",
+    description:
+      "A single installable Python package that centralizes telemetry, RAG citation-checking, and compliance auditing across a multi-repo AI ecosystem (RiskGuard AI, Deep Agent AI, Stablecoin Treasury Orchestrator) instead of each service re-implementing it. Telemetry is captured at exactly three seams — the FastAPI edge, a wrapped multi-LLM gateway (Claude/Gemini/DeepSeek), and LangGraph node transitions — as OpenTelemetry spans with GenAI semantic conventions, keyed by time-sortable ULID trace IDs and merged into graph state through a dedicated reducer. Expensive work (citation verification, drift detection, hash-chaining, alert evaluation) runs off the hot path in an async Checker service, following a fail-open-for-telemetry, fail-closed-for-compliance design so a broken observability layer never breaks a user request but a broken audit trail always halts one.",
+    categories: ["ai-powered", "business", "featured"],
+    badges: [
+      { label: "Featured", variant: "featured" },
+      { label: "AI-Powered", variant: "ai" },
+      { label: "Observability", variant: "business" },
+      { label: "OpenTelemetry", variant: "info" },
+    ],
+    featured: true,
+    techTags: ["Python", "OpenTelemetry", "FastAPI", "LangGraph", "Neon Postgres", "ULID", "Docker"],
+    aiTools: ["Claude", "Gemini", "DeepSeek", "RAG Citation Checking"],
+    features: [
+      "OTel-Native Telemetry Schema",
+      "ULID Time-Sortable Trace IDs",
+      "LangGraph Telemetry Reducer",
+      "RAG Citation Checker",
+      "Hash-Chained Audit Trail",
+      "Alert Taxonomy & Thresholds",
+      "Shared Cross-Repo Package",
+    ],
+    link: { label: "Request Demo", href: "#contact" },
+    deploymentBadge: "Python Package · Contracts Frozen",
+    impactRating: { stars: 5, label: "Reliability Engineering Impact" },
+  },
+  {
     slug: "stablecoin-treasury-orchestrator",
     title: "Stablecoin Treasury Orchestrator: Settlement & Compliance Engine",
     description:
