@@ -180,6 +180,67 @@
 
             <!-- Projects Grid -->
             <div class="projects-grid">
+                <!-- PharmaConnect Project Card -->
+                <div class="project-card" data-category="business web-app featured cloud" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge business"><i class="fas fa-briefcase-medical"></i> Healthcare/Pharma Distribution</span>
+                        <span class="project-badge cloud"><i class="fas fa-sitemap"></i> Cross-Account Sharing Model</span>
+                        <span class="project-badge tech"><i class="fab fa-salesforce"></i> Salesforce (Apex/LWC)</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">PharmaConnect: Salesforce CRM for Pharma Distribution &amp; GPO Portal</h3>
+                        <p class="project-description">
+                            An enterprise-grade Salesforce build for a pharmaceutical distributor serving healthcare
+                            facilities directly and through Group Purchasing Organizations (GPOs), combining Service
+                            Cloud (internal support) with an Experience Cloud partner portal. The architectural
+                            centerpiece is a cross-account visibility model: a facility's staff see only their own
+                            orders and cases via a declarative Sharing Set, while a GPO coordinator sees every member
+                            facility's data through <code>GPOSharingService</code>, which grants and revokes
+                            <code>AccountShare</code> rows in sync with GPO membership changes and self-heals via a
+                            nightly reconciliation batch. Order status is kept current through a synchronous ERP
+                            integration layer with a retry policy and circuit breaker, with every callout attempt
+                            durably logged via Platform Events for cross-system traceability. Built with strict field-
+                            and record-level security (<code>WITH USER_MODE</code>, <code>with sharing</code>) and
+                            backed by a full Apex test suite (42/42 passing) that proves data isolation between
+                            facilities, not just asserts it.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Salesforce Platform</span>
+                            <span class="tech-tag">Apex</span>
+                            <span class="tech-tag">Lightning Web Components</span>
+                            <span class="tech-tag">SOQL</span>
+                            <span class="tech-tag">Experience Cloud</span>
+                            <span class="tech-tag">Service Cloud</span>
+                            <span class="tech-tag">Named Credentials</span>
+                            <span class="tech-tag">Platform Events</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> GPO Cross-Account Sharing Model</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Self-Healing Nightly Reconciliation Batch</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Resilient ERP Integration (Retry + Circuit Breaker)</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Durable Integration Logging via Platform Events</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Field- &amp; Record-Level Security Enforcement</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Full Apex Test Coverage (42/42 Passing)</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="#contact" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> Request Demo
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fab fa-salesforce"></i> Salesforce Dev Org &middot; Apex + LWC
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Enterprise CRM &amp; Healthcare Portal Impact</span>
+                        </span>
+                    </div>
+                </div>
+
                 <!-- ArchiveAgent Project Card -->
                 <div class="project-card" data-category="ai-powered business featured" data-featured="true">
                     <div class="project-header">
