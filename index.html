@@ -180,6 +180,68 @@
 
             <!-- Projects Grid -->
             <div class="projects-grid">
+                <!-- MAWO Project Card -->
+                <div class="project-card" data-category="ai-powered business featured" data-featured="true">
+                    <div class="project-header">
+                        <span class="project-badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="project-badge ai-powered"><i class="fas fa-robot"></i> AI-Powered</span>
+                        <span class="project-badge business"><i class="fas fa-bullhorn"></i> Marketing/MarTech</span>
+                        <span class="project-badge tech"><i class="fas fa-file-contract"></i> 12 ADRs &amp; OpenAPI Spec</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MAWO: AI Governance Architecture for Marketing Workflow Orchestration</h3>
+                        <p class="project-description">
+                            An architecture-first portfolio piece for an AI Solution Architect (Marketing/MarTech)
+                            role, built around a fictional omnichannel retailer's campaign content lifecycle. Eleven
+                            specification documents &mdash; including a bottleneck register that scores three
+                            workflow steps &ldquo;None&rdquo; for AI automation candidacy, with the reasoning spelled
+                            out rather than just listing what to automate &mdash; an OpenAPI spec, two data pipeline
+                            contracts, and twelve architecture decision records cover the assess-specify-validate-
+                            govern work an architect actually owns. A ~650-line reference slice proves the specs are
+                            executable rather than decorative: a FastAPI service with in-memory retrieval (no vector
+                            database, no embedding API), a fail-closed policy engine enforcing one governance rule
+                            end-to-end &mdash; unsubstantiated marketing claims route to human review &mdash; and a
+                            real Anthropic Claude adapter behind the same interface as a deterministic mock provider,
+                            so the whole pipeline runs with zero API keys by default. Every number in the repo is
+                            explicitly labeled illustrative or measured.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Pydantic</span>
+                            <span class="tech-tag">Anthropic Claude</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">pytest</span>
+                            <span class="tech-tag">OpenAPI</span>
+                        </div>
+                        <div class="project-features">
+                            <span class="feature"><i class="fas fa-check-circle"></i> Fail-Closed AI Policy Governance Engine</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> 12 Architecture Decision Records</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Data Pipeline Contracts &amp; Lineage</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Zero-API-Key Deterministic Mock Provider</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Real Anthropic Claude Adapter (Same Interface)</span>
+                            <span class="feature"><i class="fas fa-check-circle"></i> Full Test Suite &amp; Latency Harness</span>
+                        </div>
+                    </div>
+                    <div class="project-footer">
+                        <a href="https://github.com/Apolloat2022/martech-ai-workflow" target="_blank" class="project-link live">
+                            <i class="fas fa-external-link-alt"></i> View Source (GitHub)
+                        </a>
+                        <span class="deployment-badge">
+                            <i class="fas fa-code-branch"></i> FastAPI Reference Slice &middot; CI/CD
+                        </span>
+                        <span class="impact-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="impact-label">Marketing/MarTech Architecture Impact</span>
+                        </span>
+                    </div>
+                </div>
+
                 <!-- Project Prism Card -->
                 <div class="project-card" data-category="ai-powered business productivity featured" data-featured="true">
                     <div class="project-header">
