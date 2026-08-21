@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Showcases | Robin Pandey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Robin Pandey</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+
+                <li class="dropdown-item">
+                    <a href="index.html#applications" class="dropdown-trigger">
+                        Live Applications <i class="fas fa-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#applications" onclick="activateFilter('featured')">Featured & SaaS</a>
+                        </li>
+                        <li><a href="index.html#applications" onclick="activateFilter('ai')">AI-Powered</a></li>
+                        <li><a href="index.html#applications" onclick="activateFilter('web3')">Web3 & Blockchain</a>
+                        </li>
+                        <li><a href="index.html#applications" onclick="activateFilter('business')">Business
+                                Solutions</a></li>
+                        <li><a href="index.html#applications" onclick="activateFilter('all')">View All Projects</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="index.html#ai-expertise">AI Development</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="https://robinpandey.wordpress.com/" target="_blank">Blog</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Project Showcases Page -->
+    <section class="certificates-page">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                <span class="separator">/</span>
+                <span class="current">Project Showcases</span>
+            </nav>
+
+            <!-- Page Header -->
+            <div class="section-header">
+                <h1 class="section-title">Project Showcases</h1>
+                <p class="section-subtitle">One-page architecture briefs for each live application &mdash; the
+                    system design, the tech stack, and the measurable impact. Click any showcase to open the
+                    full-size brief.</p>
+            </div>
+
+            <!-- Technical Showcases -->
+            <div class="section-header" style="margin-top: 2rem; text-align: left;">
+                <h2 class="section-title" style="font-size: 1.5rem;"><i class="fas fa-microchip"></i> Technical
+                    Showcases</h2>
+            </div>
+            <div class="certificates-grid">
+
+                <div class="certificate-card" id="mawo">
+                    <div class="certificate-image">
+                        <img src="assets/projects/mawo.jpg"
+                            alt="MAWO: AI Governance Architecture for Marketing Workflow Orchestration">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/mawo.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">MAWO: AI Governance Architecture</h3>
+                        <p class="certificate-org"><i class="fas fa-bullhorn"></i> Marketing Workflow Orchestration
+                        </p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">12 ADRs</span>
+                            <span class="skill-tag">OpenAPI Spec</span>
+                            <span class="skill-tag">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="apollo-university-fde">
+                    <div class="certificate-image">
+                        <img src="assets/projects/apollo-university-fde.jpg"
+                            alt="Apollo University: Forward Deployed Engineer (FDE) Commercial LMS Platform">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/apollo-university-fde.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Apollo University: FDE Platform</h3>
+                        <p class="certificate-org"><i class="fas fa-graduation-cap"></i> Commercial LMS Platform</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">Next.js 14</span>
+                            <span class="skill-tag">Prisma ORM</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="project-prism">
+                    <div class="certificate-image">
+                        <img src="assets/projects/project-prism.jpg"
+                            alt="Project Prism: AI Capability Discovery & Governance Platform">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/project-prism.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Project Prism</h3>
+                        <p class="certificate-org"><i class="fas fa-sitemap"></i> AI Capability Discovery &amp;
+                            Governance</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Fastify</span>
+                            <span class="skill-tag">TF-IDF Search</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="pharmaconnect">
+                    <div class="certificate-image">
+                        <img src="assets/projects/pharmaconnect.jpg"
+                            alt="PharmaConnect: Salesforce CRM for Pharma Distribution & GPO Portal">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/pharmaconnect.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">PharmaConnect</h3>
+                        <p class="certificate-org"><i class="fas fa-briefcase-medical"></i> Pharma Distribution &amp;
+                            GPO Portal</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">Salesforce</span>
+                            <span class="skill-tag">Apex + LWC</span>
+                            <span class="skill-tag">Experience Cloud</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="archiveagent">
+                    <div class="certificate-image">
+                        <img src="assets/projects/archiveagent.jpg"
+                            alt="ArchiveAgent: Agentic Data Archiving & Classification for .NET">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/archiveagent.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">ArchiveAgent</h3>
+                        <p class="certificate-org"><i class="fas fa-balance-scale"></i> Agentic Data Archiving &amp;
+                            Classification</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">.NET / C#</span>
+                            <span class="skill-tag">ASP.NET Core</span>
+                            <span class="skill-tag">Claude Agentic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="apollo-messenger">
+                    <div class="certificate-image">
+                        <img src="assets/projects/apollo-messenger.jpg"
+                            alt="Apollo Messenger: Autonomous Sales Outreach Dispatcher">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/apollo-messenger.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Apollo Messenger</h3>
+                        <p class="certificate-org"><i class="fas fa-bullseye"></i> Autonomous Sales Outreach
+                            Dispatcher</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Playwright</span>
+                            <span class="skill-tag">SMTP Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="apps-command-center">
+                    <div class="certificate-image">
+                        <img src="assets/projects/apps-command-center.jpg"
+                            alt="APPS Command Center: Multi-Project DevOps Dashboard">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/apps-command-center.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">APPS Command Center</h3>
+                        <p class="certificate-org"><i class="fas fa-tools"></i> Multi-Project DevOps Dashboard</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Zero-Dependency</span>
+                            <span class="skill-tag">Git CLI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="deep-agent-ai">
+                    <div class="certificate-image">
+                        <img src="assets/projects/deep-agent-ai.jpg"
+                            alt="Deep Agent AI: Enterprise Human-in-the-Loop Orchestrator">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/deep-agent-ai.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Deep Agent AI</h3>
+                        <p class="certificate-org"><i class="fas fa-robot"></i> Enterprise Human-in-the-Loop
+                            Orchestrator</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">AWS Bedrock (Claude)</span>
+                            <span class="skill-tag">deepagents</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="obsvagent">
+                    <div class="certificate-image">
+                        <img src="assets/projects/obsvagent.jpg"
+                            alt="Obsvagent: Shared Observability, RAG-Checker & Compliance-Audit Layer">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/obsvagent.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Obsvagent</h3>
+                        <p class="certificate-org"><i class="fas fa-shield-alt"></i> Observability, RAG-Checker &amp;
+                            Compliance-Audit Layer</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">OpenTelemetry</span>
+                            <span class="skill-tag">RAG Citation Check</span>
+                            <span class="skill-tag">Hash-Chained Audit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="stablecoin-treasury">
+                    <div class="certificate-image">
+                        <img src="assets/projects/stablecoin-treasury.jpg"
+                            alt="Stablecoin Treasury Orchestrator: Settlement & Compliance Engine">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/stablecoin-treasury.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Stablecoin Treasury Orchestrator</h3>
+                        <p class="certificate-org"><i class="fas fa-link"></i> Settlement &amp; Compliance Engine</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">SHA-256 Audit Trail</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="riskguard-ai">
+                    <div class="certificate-image">
+                        <img src="assets/projects/riskguard-ai.jpg"
+                            alt="RiskGuard AI: Enterprise Risk Analytics & Automated Remediation">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/riskguard-ai.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">RiskGuard AI</h3>
+                        <p class="certificate-org"><i class="fas fa-chart-line"></i> Enterprise Risk Analytics &amp;
+                            Automated Remediation</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">XGBoost</span>
+                            <span class="skill-tag">LangGraph</span>
+                            <span class="skill-tag">Amazon Bedrock (Claude)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="mastering-ai-agentic-loops">
+                    <div class="certificate-image">
+                        <img src="assets/projects/mastering-ai-agentic-loops.jpg"
+                            alt="Mastering AI Agentic Loops: Engineering-First Course Platform">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/mastering-ai-agentic-loops.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Mastering AI Agentic Loops</h3>
+                        <p class="certificate-org"><i class="fas fa-graduation-cap"></i> Engineering-First Course
+                            Platform</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">Next.js 16</span>
+                            <span class="skill-tag">Prisma ORM</span>
+                            <span class="skill-tag">ReAct Loop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certificate-card" id="open-claw">
+                    <div class="certificate-image">
+                        <img src="assets/projects/open-claw.jpg"
+                            alt="Open Claw: Autonomous Lead-Search Agentic System">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/open-claw.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Open Claw</h3>
+                        <p class="certificate-org"><i class="fas fa-robot"></i> Autonomous Lead-Search Agentic
+                            System</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">Multi-Agent Orchestration</span>
+                            <span class="skill-tag">Tool Calling</span>
+                            <span class="skill-tag">RAG</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Non-Technical Showcase -->
+            <div class="section-header" style="margin-top: 3rem; text-align: left;">
+                <h2 class="section-title" style="font-size: 1.5rem;"><i class="fas fa-book-open"></i> Non-Technical
+                    Showcase</h2>
+                <p class="section-subtitle">Creative &amp; commercial work outside the engineering stack.</p>
+            </div>
+            <div class="certificates-grid">
+
+                <div class="certificate-card" id="mirror-audiobook">
+                    <div class="certificate-image">
+                        <img src="assets/projects/mirror-audiobook.jpg"
+                            alt="Mirror: The Audiobook — Neural Text-to-Speech Production">
+                        <div class="certificate-overlay">
+                            <a href="assets/projects/mirror-audiobook.jpg" target="_blank" rel="noopener"
+                                class="view-certificate-btn">
+                                <i class="fas fa-expand"></i> View Full Brief
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Mirror: The Audiobook</h3>
+                        <p class="certificate-org"><i class="fas fa-book"></i> Neural Text-to-Speech Production</p>
+                        <div class="certificate-skills">
+                            <span class="skill-tag">Amazon Polly</span>
+                            <span class="skill-tag">SSML</span>
+                            <span class="skill-tag">Neural TTS</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Robin Pandey</h3>
+                    <p>AI-Assisted Full Stack Developer & Solution Architect</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#applications">Projects</a></li>
+                        <li><a href="project-showcases.html">Project Showcases</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <li><a href="https://robinpandey.wordpress.com/" target="_blank">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/robinpandey" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Apolloat2022" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Robin Pandey. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
