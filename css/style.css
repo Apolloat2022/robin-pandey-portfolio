@@ -2146,6 +2146,55 @@ body {
     font-weight: 500;
 }
 
+/* Business CTA banner (project-showcases.html) */
+.business-cta-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    padding: 1.5rem 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.business-cta-banner h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.375rem;
+    color: var(--text-primary);
+}
+
+.business-cta-banner p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.business-cta-banner .btn {
+    flex-shrink: 0;
+}
+
+.business-link {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+}
+
+.business-link a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.business-link a:hover {
+    gap: 0.6rem;
+}
+
 /* Certificates Grid */
 .certificates-grid {
     display: grid;
