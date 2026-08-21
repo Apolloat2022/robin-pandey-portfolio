@@ -1861,6 +1861,11 @@ body {
     border: 1px solid var(--primary);
     background: transparent;
     color: var(--primary);
+    padding: 7px 16px;
+    border-radius: 8px;
+    width: fit-content;
+    max-width: 100%;
+    white-space: nowrap;
 }
 
 .project-link.audit:hover {
