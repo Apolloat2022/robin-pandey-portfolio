@@ -855,7 +855,7 @@ export const projects: Project[] = [
       { label: "Business", variant: "business" },
       { label: "Business Portal", variant: "info" },
     ],
-    techTags: ["Portal", "Business Tools", "Management", ".net Domain"],
+    techTags: ["Portal", "Business Tools", "Management", "GitHub Pages"],
     features: [
       "CRM Integration",
       "Invoice Generation",
@@ -864,8 +864,8 @@ export const projects: Project[] = [
       "Financial Reporting",
       "Multi-User Access",
     ],
-    link: { label: "Live Demo", href: "https://onlinemybiz.net" },
-    deploymentBadge: "Production",
+    link: { label: "Live Demo", href: "https://apolloat2022.github.io/Onlinemybiz/" },
+    deploymentBadge: "GitHub Pages",
   },
   {
     slug: "apollo-stem-academy",

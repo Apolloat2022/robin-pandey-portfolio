@@ -19,7 +19,7 @@ A modern, responsive portfolio showcasing 9 production-ready web applications.
 4. **Apollo Tunes Music Platform** - apollotunes.com
 5. **EmbroidIt Custom Embroidery** - embroidit.us
 6. **Apollo Technologies Business Site** - apollotechnologiesus.com
-7. **OnlineMyBiz Business Portal** - onlinemybiz.net
+7. **OnlineMyBiz Business Portal** - apolloat2022.github.io/Onlinemybiz
 8. **Apollo STEM Academy** - apolloat2022.github.io/ApolloStemAcademy
 9. **To-Do Application** - todo-app-indol-seven-99.vercel.app
 
